@@ -1,0 +1,728 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D73A67C82A9B8CAF00DA5ADE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A67C72A9B8CAF00DA5ADE /* AppDelegate.swift */; };
+		D73A67CA2A9B8CAF00DA5ADE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A67C92A9B8CAF00DA5ADE /* SceneDelegate.swift */; };
+		D73A67D12A9B8CB000DA5ADE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D73A67D02A9B8CB000DA5ADE /* Assets.xcassets */; };
+		D73A67D42A9B8CB000DA5ADE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D73A67D22A9B8CB000DA5ADE /* LaunchScreen.storyboard */; };
+		D73A67DE2A9B928C00DA5ADE /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A67DD2A9B928C00DA5ADE /* String+Extension.swift */; };
+		D73A67E02A9B929500DA5ADE /* CGSize+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A67DF2A9B929500DA5ADE /* CGSize+Extension.swift */; };
+		D73A67E22A9B929E00DA5ADE /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A67E12A9B929E00DA5ADE /* UIView+Extension.swift */; };
+		D73A67E42A9B92A700DA5ADE /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A67E32A9B92A700DA5ADE /* UIImage+Extension.swift */; };
+		D73A67EA2A9B937800DA5ADE /* FormulaBasedEditor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D73A67E82A9B937800DA5ADE /* FormulaBasedEditor.xcdatamodeld */; };
+		D73A67F02A9B943C00DA5ADE /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A67EC2A9B943C00DA5ADE /* Document.swift */; };
+		D73A67F22A9B943C00DA5ADE /* LatexFormula.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A67EE2A9B943C00DA5ADE /* LatexFormula.swift */; };
+		D73A67FA2A9B966C00DA5ADE /* DocumentsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A67F42A9B966C00DA5ADE /* DocumentsPresenter.swift */; };
+		D73A67FB2A9B966C00DA5ADE /* DocumentsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A67F52A9B966C00DA5ADE /* DocumentsInteractor.swift */; };
+		D73A67FC2A9B966C00DA5ADE /* DocumentsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A67F62A9B966C00DA5ADE /* DocumentsWorker.swift */; };
+		D73A67FD2A9B966C00DA5ADE /* DocumentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A67F72A9B966C00DA5ADE /* DocumentsViewController.swift */; };
+		D73A67FE2A9B966C00DA5ADE /* DocumentsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A67F82A9B966C00DA5ADE /* DocumentsModels.swift */; };
+		D73A67FF2A9B966C00DA5ADE /* DocumentsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A67F92A9B966C00DA5ADE /* DocumentsRouter.swift */; };
+		D73A68022A9B968400DA5ADE /* DocumentPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68012A9B968400DA5ADE /* DocumentPreviewCell.swift */; };
+		D73A680A2A9B96BD00DA5ADE /* CurrentDocumentInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68042A9B96BC00DA5ADE /* CurrentDocumentInteractor.swift */; };
+		D73A680B2A9B96BD00DA5ADE /* CurrentDocumentWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68052A9B96BC00DA5ADE /* CurrentDocumentWorker.swift */; };
+		D73A680C2A9B96BD00DA5ADE /* CurrentDocumentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68062A9B96BD00DA5ADE /* CurrentDocumentPresenter.swift */; };
+		D73A680D2A9B96BD00DA5ADE /* CurrentDocumentModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68072A9B96BD00DA5ADE /* CurrentDocumentModels.swift */; };
+		D73A680E2A9B96BD00DA5ADE /* CurrentDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68082A9B96BD00DA5ADE /* CurrentDocumentViewController.swift */; };
+		D73A680F2A9B96BD00DA5ADE /* CurrentDocumentRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68092A9B96BD00DA5ADE /* CurrentDocumentRouter.swift */; };
+		D73A68122A9B96C800DA5ADE /* TextAttachmentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68112A9B96C800DA5ADE /* TextAttachmentFactory.swift */; };
+		D73A68182A9B96EF00DA5ADE /* LaTeXParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68152A9B96EF00DA5ADE /* LaTeXParser.swift */; };
+		D73A68192A9B96EF00DA5ADE /* LaTeXScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68162A9B96EF00DA5ADE /* LaTeXScanner.swift */; };
+		D73A681A2A9B96EF00DA5ADE /* LaTeXPrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68172A9B96EF00DA5ADE /* LaTeXPrinter.swift */; };
+		D73A681E2A9B96FD00DA5ADE /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A681C2A9B96FD00DA5ADE /* Token.swift */; };
+		D73A681F2A9B96FD00DA5ADE /* TokenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A681D2A9B96FD00DA5ADE /* TokenType.swift */; };
+		D73A68212A9B970500DA5ADE /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68202A9B970500DA5ADE /* Expression.swift */; };
+		D73A68242A9B971300DA5ADE /* TextHistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68222A9B971300DA5ADE /* TextHistoryManager.swift */; };
+		D73A68252A9B971300DA5ADE /* VerticallyCenteredTextAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68232A9B971300DA5ADE /* VerticallyCenteredTextAttachment.swift */; };
+		D73A68292A9B974A00DA5ADE /* FormulaFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68282A9B974A00DA5ADE /* FormulaFactory.swift */; };
+		D73A68312A9B977B00DA5ADE /* BinaryExpressionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A682D2A9B977B00DA5ADE /* BinaryExpressionView.swift */; };
+		D73A68322A9B977B00DA5ADE /* BaseExpressionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A682E2A9B977B00DA5ADE /* BaseExpressionView.swift */; };
+		D73A68332A9B977B00DA5ADE /* FractionExpressionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A682F2A9B977B00DA5ADE /* FractionExpressionView.swift */; };
+		D73A68342A9B977B00DA5ADE /* ExpressionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68302A9B977B00DA5ADE /* ExpressionView.swift */; };
+		D73A68362A9B978200DA5ADE /* PowerExpressionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68352A9B978200DA5ADE /* PowerExpressionView.swift */; };
+		D73A68392A9B978800DA5ADE /* BraceExpressionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68372A9B978800DA5ADE /* BraceExpressionView.swift */; };
+		D73A683A2A9B978800DA5ADE /* GroupingExpressionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68382A9B978800DA5ADE /* GroupingExpressionView.swift */; };
+		D73A683C2A9B979700DA5ADE /* FormulaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A683B2A9B979700DA5ADE /* FormulaView.swift */; };
+		D73A68432A9B97AF00DA5ADE /* FormulaWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A683D2A9B97AF00DA5ADE /* FormulaWorker.swift */; };
+		D73A68442A9B97AF00DA5ADE /* FormulaRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A683E2A9B97AF00DA5ADE /* FormulaRouter.swift */; };
+		D73A68452A9B97AF00DA5ADE /* FormulaModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A683F2A9B97AF00DA5ADE /* FormulaModels.swift */; };
+		D73A68462A9B97AF00DA5ADE /* FormulaInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68402A9B97AF00DA5ADE /* FormulaInteractor.swift */; };
+		D73A68472A9B97AF00DA5ADE /* FormulaPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68412A9B97AF00DA5ADE /* FormulaPresenter.swift */; };
+		D73A68482A9B97AF00DA5ADE /* FormulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68422A9B97AF00DA5ADE /* FormulaViewController.swift */; };
+		D73A684D2A9B97CC00DA5ADE /* CurrentDocumentTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A684C2A9B97CC00DA5ADE /* CurrentDocumentTextView.swift */; };
+		D73A684F2A9B97D200DA5ADE /* CurrentDocumentTextViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A684E2A9B97D200DA5ADE /* CurrentDocumentTextViewFactory.swift */; };
+		D73A68572A9B98C600DA5ADE /* DocumentStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68562A9B98C600DA5ADE /* DocumentStorageManager.swift */; };
+		D73A68592A9B9CBC00DA5ADE /* NSAttributedStringTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68582A9B9CBC00DA5ADE /* NSAttributedStringTransformer.swift */; };
+		D73A685B2A9DE6AF00DA5ADE /* DocumentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A685A2A9DE6AF00DA5ADE /* DocumentCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D73A67C42A9B8CAF00DA5ADE /* FormulaBasedEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FormulaBasedEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D73A67C72A9B8CAF00DA5ADE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D73A67C92A9B8CAF00DA5ADE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D73A67D02A9B8CB000DA5ADE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D73A67D32A9B8CB000DA5ADE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D73A67D52A9B8CB000DA5ADE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D73A67DD2A9B928C00DA5ADE /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		D73A67DF2A9B929500DA5ADE /* CGSize+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Extension.swift"; sourceTree = "<group>"; };
+		D73A67E12A9B929E00DA5ADE /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		D73A67E32A9B92A700DA5ADE /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		D73A67E92A9B937800DA5ADE /* FormulaBasedEditor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FormulaBasedEditor.xcdatamodel; sourceTree = "<group>"; };
+		D73A67EC2A9B943C00DA5ADE /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		D73A67EE2A9B943C00DA5ADE /* LatexFormula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatexFormula.swift; sourceTree = "<group>"; };
+		D73A67F42A9B966C00DA5ADE /* DocumentsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentsPresenter.swift; sourceTree = "<group>"; };
+		D73A67F52A9B966C00DA5ADE /* DocumentsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentsInteractor.swift; sourceTree = "<group>"; };
+		D73A67F62A9B966C00DA5ADE /* DocumentsWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentsWorker.swift; sourceTree = "<group>"; };
+		D73A67F72A9B966C00DA5ADE /* DocumentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentsViewController.swift; sourceTree = "<group>"; };
+		D73A67F82A9B966C00DA5ADE /* DocumentsModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentsModels.swift; sourceTree = "<group>"; };
+		D73A67F92A9B966C00DA5ADE /* DocumentsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentsRouter.swift; sourceTree = "<group>"; };
+		D73A68012A9B968400DA5ADE /* DocumentPreviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentPreviewCell.swift; sourceTree = "<group>"; };
+		D73A68042A9B96BC00DA5ADE /* CurrentDocumentInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentDocumentInteractor.swift; sourceTree = "<group>"; };
+		D73A68052A9B96BC00DA5ADE /* CurrentDocumentWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentDocumentWorker.swift; sourceTree = "<group>"; };
+		D73A68062A9B96BD00DA5ADE /* CurrentDocumentPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentDocumentPresenter.swift; sourceTree = "<group>"; };
+		D73A68072A9B96BD00DA5ADE /* CurrentDocumentModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentDocumentModels.swift; sourceTree = "<group>"; };
+		D73A68082A9B96BD00DA5ADE /* CurrentDocumentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentDocumentViewController.swift; sourceTree = "<group>"; };
+		D73A68092A9B96BD00DA5ADE /* CurrentDocumentRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentDocumentRouter.swift; sourceTree = "<group>"; };
+		D73A68112A9B96C800DA5ADE /* TextAttachmentFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextAttachmentFactory.swift; sourceTree = "<group>"; };
+		D73A68152A9B96EF00DA5ADE /* LaTeXParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaTeXParser.swift; sourceTree = "<group>"; };
+		D73A68162A9B96EF00DA5ADE /* LaTeXScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaTeXScanner.swift; sourceTree = "<group>"; };
+		D73A68172A9B96EF00DA5ADE /* LaTeXPrinter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaTeXPrinter.swift; sourceTree = "<group>"; };
+		D73A681C2A9B96FD00DA5ADE /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		D73A681D2A9B96FD00DA5ADE /* TokenType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenType.swift; sourceTree = "<group>"; };
+		D73A68202A9B970500DA5ADE /* Expression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expression.swift; sourceTree = "<group>"; };
+		D73A68222A9B971300DA5ADE /* TextHistoryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextHistoryManager.swift; sourceTree = "<group>"; };
+		D73A68232A9B971300DA5ADE /* VerticallyCenteredTextAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticallyCenteredTextAttachment.swift; sourceTree = "<group>"; };
+		D73A68282A9B974A00DA5ADE /* FormulaFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaFactory.swift; sourceTree = "<group>"; };
+		D73A682D2A9B977B00DA5ADE /* BinaryExpressionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryExpressionView.swift; sourceTree = "<group>"; };
+		D73A682E2A9B977B00DA5ADE /* BaseExpressionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseExpressionView.swift; sourceTree = "<group>"; };
+		D73A682F2A9B977B00DA5ADE /* FractionExpressionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FractionExpressionView.swift; sourceTree = "<group>"; };
+		D73A68302A9B977B00DA5ADE /* ExpressionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressionView.swift; sourceTree = "<group>"; };
+		D73A68352A9B978200DA5ADE /* PowerExpressionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerExpressionView.swift; sourceTree = "<group>"; };
+		D73A68372A9B978800DA5ADE /* BraceExpressionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BraceExpressionView.swift; sourceTree = "<group>"; };
+		D73A68382A9B978800DA5ADE /* GroupingExpressionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupingExpressionView.swift; sourceTree = "<group>"; };
+		D73A683B2A9B979700DA5ADE /* FormulaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaView.swift; sourceTree = "<group>"; };
+		D73A683D2A9B97AF00DA5ADE /* FormulaWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaWorker.swift; sourceTree = "<group>"; };
+		D73A683E2A9B97AF00DA5ADE /* FormulaRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaRouter.swift; sourceTree = "<group>"; };
+		D73A683F2A9B97AF00DA5ADE /* FormulaModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaModels.swift; sourceTree = "<group>"; };
+		D73A68402A9B97AF00DA5ADE /* FormulaInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaInteractor.swift; sourceTree = "<group>"; };
+		D73A68412A9B97AF00DA5ADE /* FormulaPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaPresenter.swift; sourceTree = "<group>"; };
+		D73A68422A9B97AF00DA5ADE /* FormulaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaViewController.swift; sourceTree = "<group>"; };
+		D73A684C2A9B97CC00DA5ADE /* CurrentDocumentTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentDocumentTextView.swift; sourceTree = "<group>"; };
+		D73A684E2A9B97D200DA5ADE /* CurrentDocumentTextViewFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentDocumentTextViewFactory.swift; sourceTree = "<group>"; };
+		D73A68562A9B98C600DA5ADE /* DocumentStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentStorageManager.swift; sourceTree = "<group>"; };
+		D73A68582A9B9CBC00DA5ADE /* NSAttributedStringTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringTransformer.swift; sourceTree = "<group>"; };
+		D73A685A2A9DE6AF00DA5ADE /* DocumentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D73A67C12A9B8CAF00DA5ADE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D73A67BB2A9B8CAF00DA5ADE = {
+			isa = PBXGroup;
+			children = (
+				D73A67C62A9B8CAF00DA5ADE /* FormulaBasedEditor */,
+				D73A67C52A9B8CAF00DA5ADE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D73A67C52A9B8CAF00DA5ADE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D73A67C42A9B8CAF00DA5ADE /* FormulaBasedEditor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D73A67C62A9B8CAF00DA5ADE /* FormulaBasedEditor */ = {
+			isa = PBXGroup;
+			children = (
+				D73A67C72A9B8CAF00DA5ADE /* AppDelegate.swift */,
+				D73A67C92A9B8CAF00DA5ADE /* SceneDelegate.swift */,
+				D73A68552A9B98B100DA5ADE /* Services */,
+				D73A67E72A9B935A00DA5ADE /* CoreData */,
+				D73A67DB2A9B927200DA5ADE /* Core */,
+				D73A67E62A9B932700DA5ADE /* Models */,
+				D73A67E52A9B931000DA5ADE /* Scenes */,
+				D73A68492A9B97BB00DA5ADE /* Common */,
+				D73A67D02A9B8CB000DA5ADE /* Assets.xcassets */,
+				D73A67D22A9B8CB000DA5ADE /* LaunchScreen.storyboard */,
+				D73A67D52A9B8CB000DA5ADE /* Info.plist */,
+			);
+			path = FormulaBasedEditor;
+			sourceTree = "<group>";
+		};
+		D73A67DB2A9B927200DA5ADE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D73A67DC2A9B927400DA5ADE /* Extensions */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		D73A67DC2A9B927400DA5ADE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D73A67DD2A9B928C00DA5ADE /* String+Extension.swift */,
+				D73A67DF2A9B929500DA5ADE /* CGSize+Extension.swift */,
+				D73A67E12A9B929E00DA5ADE /* UIView+Extension.swift */,
+				D73A67E32A9B92A700DA5ADE /* UIImage+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D73A67E52A9B931000DA5ADE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D73A67F32A9B962000DA5ADE /* Documents */,
+				D73A68032A9B96A500DA5ADE /* CurrentDocument */,
+				D73A68262A9B973300DA5ADE /* Formula */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D73A67E62A9B932700DA5ADE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D73A68542A9B987800DA5ADE /* Document */,
+				D73A68132A9B96D300DA5ADE /* AST */,
+				D73A68222A9B971300DA5ADE /* TextHistoryManager.swift */,
+				D73A68232A9B971300DA5ADE /* VerticallyCenteredTextAttachment.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D73A67E72A9B935A00DA5ADE /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				D73A67E82A9B937800DA5ADE /* FormulaBasedEditor.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		D73A67F32A9B962000DA5ADE /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				D73A68002A9B967100DA5ADE /* DocumentCell */,
+				D73A67F52A9B966C00DA5ADE /* DocumentsInteractor.swift */,
+				D73A67F82A9B966C00DA5ADE /* DocumentsModels.swift */,
+				D73A67F42A9B966C00DA5ADE /* DocumentsPresenter.swift */,
+				D73A67F92A9B966C00DA5ADE /* DocumentsRouter.swift */,
+				D73A67F72A9B966C00DA5ADE /* DocumentsViewController.swift */,
+				D73A67F62A9B966C00DA5ADE /* DocumentsWorker.swift */,
+			);
+			path = Documents;
+			sourceTree = "<group>";
+		};
+		D73A68002A9B967100DA5ADE /* DocumentCell */ = {
+			isa = PBXGroup;
+			children = (
+				D73A68012A9B968400DA5ADE /* DocumentPreviewCell.swift */,
+				D73A685A2A9DE6AF00DA5ADE /* DocumentCell.swift */,
+			);
+			path = DocumentCell;
+			sourceTree = "<group>";
+		};
+		D73A68032A9B96A500DA5ADE /* CurrentDocument */ = {
+			isa = PBXGroup;
+			children = (
+				D73A68102A9B96C000DA5ADE /* Factories */,
+				D73A68042A9B96BC00DA5ADE /* CurrentDocumentInteractor.swift */,
+				D73A68072A9B96BD00DA5ADE /* CurrentDocumentModels.swift */,
+				D73A68062A9B96BD00DA5ADE /* CurrentDocumentPresenter.swift */,
+				D73A68092A9B96BD00DA5ADE /* CurrentDocumentRouter.swift */,
+				D73A68082A9B96BD00DA5ADE /* CurrentDocumentViewController.swift */,
+				D73A68052A9B96BC00DA5ADE /* CurrentDocumentWorker.swift */,
+			);
+			path = CurrentDocument;
+			sourceTree = "<group>";
+		};
+		D73A68102A9B96C000DA5ADE /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				D73A68112A9B96C800DA5ADE /* TextAttachmentFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		D73A68132A9B96D300DA5ADE /* AST */ = {
+			isa = PBXGroup;
+			children = (
+				D73A68202A9B970500DA5ADE /* Expression.swift */,
+				D73A68142A9B96E100DA5ADE /* FormulaSyntaxAnalyzers */,
+				D73A681B2A9B96F500DA5ADE /* Token */,
+			);
+			path = AST;
+			sourceTree = "<group>";
+		};
+		D73A68142A9B96E100DA5ADE /* FormulaSyntaxAnalyzers */ = {
+			isa = PBXGroup;
+			children = (
+				D73A68162A9B96EF00DA5ADE /* LaTeXScanner.swift */,
+				D73A68152A9B96EF00DA5ADE /* LaTeXParser.swift */,
+				D73A68172A9B96EF00DA5ADE /* LaTeXPrinter.swift */,
+			);
+			path = FormulaSyntaxAnalyzers;
+			sourceTree = "<group>";
+		};
+		D73A681B2A9B96F500DA5ADE /* Token */ = {
+			isa = PBXGroup;
+			children = (
+				D73A681C2A9B96FD00DA5ADE /* Token.swift */,
+				D73A681D2A9B96FD00DA5ADE /* TokenType.swift */,
+			);
+			path = Token;
+			sourceTree = "<group>";
+		};
+		D73A68262A9B973300DA5ADE /* Formula */ = {
+			isa = PBXGroup;
+			children = (
+				D73A68402A9B97AF00DA5ADE /* FormulaInteractor.swift */,
+				D73A683F2A9B97AF00DA5ADE /* FormulaModels.swift */,
+				D73A68412A9B97AF00DA5ADE /* FormulaPresenter.swift */,
+				D73A683E2A9B97AF00DA5ADE /* FormulaRouter.swift */,
+				D73A68422A9B97AF00DA5ADE /* FormulaViewController.swift */,
+				D73A683D2A9B97AF00DA5ADE /* FormulaWorker.swift */,
+				D73A682A2A9B974D00DA5ADE /* Views */,
+				D73A68272A9B973F00DA5ADE /* Factories */,
+			);
+			path = Formula;
+			sourceTree = "<group>";
+		};
+		D73A68272A9B973F00DA5ADE /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				D73A68282A9B974A00DA5ADE /* FormulaFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		D73A682A2A9B974D00DA5ADE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D73A683B2A9B979700DA5ADE /* FormulaView.swift */,
+				D73A682B2A9B975200DA5ADE /* Expressions */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D73A682B2A9B975200DA5ADE /* Expressions */ = {
+			isa = PBXGroup;
+			children = (
+				D73A68302A9B977B00DA5ADE /* ExpressionView.swift */,
+				D73A682E2A9B977B00DA5ADE /* BaseExpressionView.swift */,
+				D73A682D2A9B977B00DA5ADE /* BinaryExpressionView.swift */,
+				D73A682F2A9B977B00DA5ADE /* FractionExpressionView.swift */,
+				D73A68352A9B978200DA5ADE /* PowerExpressionView.swift */,
+				D73A682C2A9B975A00DA5ADE /* GroupingExpression */,
+			);
+			path = Expressions;
+			sourceTree = "<group>";
+		};
+		D73A682C2A9B975A00DA5ADE /* GroupingExpression */ = {
+			isa = PBXGroup;
+			children = (
+				D73A68372A9B978800DA5ADE /* BraceExpressionView.swift */,
+				D73A68382A9B978800DA5ADE /* GroupingExpressionView.swift */,
+			);
+			path = GroupingExpression;
+			sourceTree = "<group>";
+		};
+		D73A68492A9B97BB00DA5ADE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D73A684B2A9B97C300DA5ADE /* Factories */,
+				D73A684A2A9B97C100DA5ADE /* Views */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		D73A684A2A9B97C100DA5ADE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D73A684C2A9B97CC00DA5ADE /* CurrentDocumentTextView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D73A684B2A9B97C300DA5ADE /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				D73A684E2A9B97D200DA5ADE /* CurrentDocumentTextViewFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		D73A68542A9B987800DA5ADE /* Document */ = {
+			isa = PBXGroup;
+			children = (
+				D73A67EC2A9B943C00DA5ADE /* Document.swift */,
+				D73A67EE2A9B943C00DA5ADE /* LatexFormula.swift */,
+				D73A68582A9B9CBC00DA5ADE /* NSAttributedStringTransformer.swift */,
+			);
+			path = Document;
+			sourceTree = "<group>";
+		};
+		D73A68552A9B98B100DA5ADE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D73A68562A9B98C600DA5ADE /* DocumentStorageManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D73A67C32A9B8CAF00DA5ADE /* FormulaBasedEditor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D73A67D82A9B8CB000DA5ADE /* Build configuration list for PBXNativeTarget "FormulaBasedEditor" */;
+			buildPhases = (
+				D73A67C02A9B8CAF00DA5ADE /* Sources */,
+				D73A67C12A9B8CAF00DA5ADE /* Frameworks */,
+				D73A67C22A9B8CAF00DA5ADE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FormulaBasedEditor;
+			productName = FormulaBasedEditor;
+			productReference = D73A67C42A9B8CAF00DA5ADE /* FormulaBasedEditor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D73A67BC2A9B8CAF00DA5ADE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					D73A67C32A9B8CAF00DA5ADE = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = D73A67BF2A9B8CAF00DA5ADE /* Build configuration list for PBXProject "FormulaBasedEditor" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D73A67BB2A9B8CAF00DA5ADE;
+			productRefGroup = D73A67C52A9B8CAF00DA5ADE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D73A67C32A9B8CAF00DA5ADE /* FormulaBasedEditor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D73A67C22A9B8CAF00DA5ADE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D73A67D42A9B8CB000DA5ADE /* LaunchScreen.storyboard in Resources */,
+				D73A67D12A9B8CB000DA5ADE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D73A67C02A9B8CAF00DA5ADE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D73A67FA2A9B966C00DA5ADE /* DocumentsPresenter.swift in Sources */,
+				D73A67FC2A9B966C00DA5ADE /* DocumentsWorker.swift in Sources */,
+				D73A67FB2A9B966C00DA5ADE /* DocumentsInteractor.swift in Sources */,
+				D73A67FF2A9B966C00DA5ADE /* DocumentsRouter.swift in Sources */,
+				D73A68122A9B96C800DA5ADE /* TextAttachmentFactory.swift in Sources */,
+				D73A68022A9B968400DA5ADE /* DocumentPreviewCell.swift in Sources */,
+				D73A680B2A9B96BD00DA5ADE /* CurrentDocumentWorker.swift in Sources */,
+				D73A68442A9B97AF00DA5ADE /* FormulaRouter.swift in Sources */,
+				D73A67E22A9B929E00DA5ADE /* UIView+Extension.swift in Sources */,
+				D73A68362A9B978200DA5ADE /* PowerExpressionView.swift in Sources */,
+				D73A684D2A9B97CC00DA5ADE /* CurrentDocumentTextView.swift in Sources */,
+				D73A680C2A9B96BD00DA5ADE /* CurrentDocumentPresenter.swift in Sources */,
+				D73A67E42A9B92A700DA5ADE /* UIImage+Extension.swift in Sources */,
+				D73A67FE2A9B966C00DA5ADE /* DocumentsModels.swift in Sources */,
+				D73A68242A9B971300DA5ADE /* TextHistoryManager.swift in Sources */,
+				D73A68332A9B977B00DA5ADE /* FractionExpressionView.swift in Sources */,
+				D73A68572A9B98C600DA5ADE /* DocumentStorageManager.swift in Sources */,
+				D73A681A2A9B96EF00DA5ADE /* LaTeXPrinter.swift in Sources */,
+				D73A68452A9B97AF00DA5ADE /* FormulaModels.swift in Sources */,
+				D73A67DE2A9B928C00DA5ADE /* String+Extension.swift in Sources */,
+				D73A68182A9B96EF00DA5ADE /* LaTeXParser.swift in Sources */,
+				D73A67EA2A9B937800DA5ADE /* FormulaBasedEditor.xcdatamodeld in Sources */,
+				D73A681E2A9B96FD00DA5ADE /* Token.swift in Sources */,
+				D73A680D2A9B96BD00DA5ADE /* CurrentDocumentModels.swift in Sources */,
+				D73A68432A9B97AF00DA5ADE /* FormulaWorker.swift in Sources */,
+				D73A67E02A9B929500DA5ADE /* CGSize+Extension.swift in Sources */,
+				D73A683A2A9B978800DA5ADE /* GroupingExpressionView.swift in Sources */,
+				D73A68462A9B97AF00DA5ADE /* FormulaInteractor.swift in Sources */,
+				D73A68392A9B978800DA5ADE /* BraceExpressionView.swift in Sources */,
+				D73A67F02A9B943C00DA5ADE /* Document.swift in Sources */,
+				D73A685B2A9DE6AF00DA5ADE /* DocumentCell.swift in Sources */,
+				D73A67F22A9B943C00DA5ADE /* LatexFormula.swift in Sources */,
+				D73A68192A9B96EF00DA5ADE /* LaTeXScanner.swift in Sources */,
+				D73A67C82A9B8CAF00DA5ADE /* AppDelegate.swift in Sources */,
+				D73A68252A9B971300DA5ADE /* VerticallyCenteredTextAttachment.swift in Sources */,
+				D73A680F2A9B96BD00DA5ADE /* CurrentDocumentRouter.swift in Sources */,
+				D73A680A2A9B96BD00DA5ADE /* CurrentDocumentInteractor.swift in Sources */,
+				D73A68472A9B97AF00DA5ADE /* FormulaPresenter.swift in Sources */,
+				D73A68322A9B977B00DA5ADE /* BaseExpressionView.swift in Sources */,
+				D73A680E2A9B96BD00DA5ADE /* CurrentDocumentViewController.swift in Sources */,
+				D73A68482A9B97AF00DA5ADE /* FormulaViewController.swift in Sources */,
+				D73A683C2A9B979700DA5ADE /* FormulaView.swift in Sources */,
+				D73A67CA2A9B8CAF00DA5ADE /* SceneDelegate.swift in Sources */,
+				D73A681F2A9B96FD00DA5ADE /* TokenType.swift in Sources */,
+				D73A68592A9B9CBC00DA5ADE /* NSAttributedStringTransformer.swift in Sources */,
+				D73A68342A9B977B00DA5ADE /* ExpressionView.swift in Sources */,
+				D73A67FD2A9B966C00DA5ADE /* DocumentsViewController.swift in Sources */,
+				D73A68292A9B974A00DA5ADE /* FormulaFactory.swift in Sources */,
+				D73A68212A9B970500DA5ADE /* Expression.swift in Sources */,
+				D73A684F2A9B97D200DA5ADE /* CurrentDocumentTextViewFactory.swift in Sources */,
+				D73A68312A9B977B00DA5ADE /* BinaryExpressionView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D73A67D22A9B8CB000DA5ADE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D73A67D32A9B8CB000DA5ADE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D73A67D62A9B8CB000DA5ADE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D73A67D72A9B8CB000DA5ADE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D73A67D92A9B8CB000DA5ADE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FormulaBasedEditor/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.snowlukin.FormulaBasedEditor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D73A67DA2A9B8CB000DA5ADE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FormulaBasedEditor/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.snowlukin.FormulaBasedEditor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D73A67BF2A9B8CAF00DA5ADE /* Build configuration list for PBXProject "FormulaBasedEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D73A67D62A9B8CB000DA5ADE /* Debug */,
+				D73A67D72A9B8CB000DA5ADE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D73A67D82A9B8CB000DA5ADE /* Build configuration list for PBXNativeTarget "FormulaBasedEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D73A67D92A9B8CB000DA5ADE /* Debug */,
+				D73A67DA2A9B8CB000DA5ADE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D73A67E82A9B937800DA5ADE /* FormulaBasedEditor.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D73A67E92A9B937800DA5ADE /* FormulaBasedEditor.xcdatamodel */,
+			);
+			currentVersion = D73A67E92A9B937800DA5ADE /* FormulaBasedEditor.xcdatamodel */;
+			path = FormulaBasedEditor.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D73A67BC2A9B8CAF00DA5ADE /* Project object */;
+}
