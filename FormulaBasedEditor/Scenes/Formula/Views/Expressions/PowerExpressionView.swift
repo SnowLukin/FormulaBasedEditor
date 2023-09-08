@@ -13,12 +13,10 @@ final class PowerExpressionView: UIView, ExpressionView {
     private var baseTerm: ExpressionView
     private var powerTerm: ExpressionView
     
-    private lazy var hStack: UIStackView = {
-        let stack = UIStackView()
-        stack.axis = .horizontal
-        stack.alignment = .bottom
-        stack.spacing = 1
-        return stack
+    private let container: UIView = {
+        let view = UIView()
+        view.backgroundColor = .clear
+        return view
     }()
 
     init(baseTerm: ExpressionView, powerTerm: ExpressionView) {
@@ -42,18 +40,24 @@ final class PowerExpressionView: UIView, ExpressionView {
     }
 
     private func setupViews() {
-        addSubviews(baseTerm, powerTerm)
+        addSubviews(container)
+        container.addSubviews(baseTerm, powerTerm)
 
         let size = sizeForView()
         fixedWidth(size.width)
         fixedHeight(size.height)
+        container
+            .fixedWidth(size.width)
+            .fixedHeight(size.height)
+            .centerVertically()
+            .centerHorizontally()
         baseTerm
             .leading()
             .bottom()
             .top()
         powerTerm
             .top()
-            .trailing()
+            .leading(2, to: baseTerm.trailingAnchor)
     }
 }
 

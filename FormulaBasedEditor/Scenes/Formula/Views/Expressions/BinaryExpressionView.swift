@@ -10,7 +10,8 @@ import UIKit
 final class BinaryExpressionView: UIView, ExpressionView {
 
     var level: CGFloat
-    private var binaryOperator: Operator
+    
+    private var binaryOperator: String
 
     private var leftTerm: ExpressionView
     private var rightTerm: ExpressionView
@@ -31,12 +32,12 @@ final class BinaryExpressionView: UIView, ExpressionView {
         return stack
     }()
 
-    init(leftTerm: ExpressionView, rightTerm: ExpressionView, binaryOperator: Operator) {
-        self.leftTerm = leftTerm
+    init(leftTerm: ExpressionView, rightTerm: ExpressionView, binaryOperator: String) {
         self.binaryOperator = binaryOperator
+        self.leftTerm = leftTerm
         self.rightTerm = rightTerm
         self.level = max(leftTerm.level, rightTerm.level)
-        self.binaryOperatorTerm = BaseExpresionView(text: binaryOperator.rawValue, level: level)
+        self.binaryOperatorTerm = BaseExpresionView(text: binaryOperator, level: level)
         super.init(frame: .zero)
         setupViews()
     }
@@ -57,7 +58,7 @@ final class BinaryExpressionView: UIView, ExpressionView {
     private func setupViews() {
         addSubview(hStack)
         hStack.addArrangedSubview(leftTerm)
-        if binaryOperator == .mult {
+        if binaryOperator == Constants.multOperator {
             hStack.addArrangedSubview(multOperator)
             multOperator
                 .fixedHeight(binaryOperatorTerm.sizeForView().height / 1.5)
@@ -119,13 +120,8 @@ final class BinaryExpressionView: UIView, ExpressionView {
 }
 
 extension BinaryExpressionView {
-    enum Operator: String {
-        case plus = "+"
-        case minus = "-"
-        case mult = "*"
-    }
-
     private enum Constants {
+        static let multOperator = "*"
         static let spacing: CGFloat = 2
     }
 }

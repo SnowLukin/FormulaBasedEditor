@@ -92,19 +92,12 @@ private final class FormulaExpressionBuilder: ExpressionVisitor {
 
         if expr.operator.type == .slash {
             return FractionExpressionView(nominator: leftTerm, dominator: rightTerm)
-        } else {
-            let binaryOperator: BinaryExpressionView.Operator
-            switch expr.operator.type {
-            case .star: binaryOperator = .mult
-            case .plus: binaryOperator = .plus
-            default: binaryOperator = .minus
-            }
-            return BinaryExpressionView(
-                leftTerm: leftTerm,
-                rightTerm: rightTerm,
-                binaryOperator: binaryOperator
-            )
         }
+        return BinaryExpressionView(
+            leftTerm: leftTerm,
+            rightTerm: rightTerm,
+            binaryOperator: expr.operator.lexeme
+        )
     }
 
     func visitPowerExpression(_ expr: PowerNode) -> ExpressionView {

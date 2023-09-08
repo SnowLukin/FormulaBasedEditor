@@ -81,6 +81,7 @@ final class CurrentDocumentViewController: UIViewController, CurrentDocumentDisp
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemBackground
         navigationItem.largeTitleDisplayMode = .never
         
         configureDocumentTextView()
