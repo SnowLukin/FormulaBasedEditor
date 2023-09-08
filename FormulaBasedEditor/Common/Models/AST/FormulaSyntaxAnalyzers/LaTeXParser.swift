@@ -40,7 +40,7 @@ private extension LaTeXParser {
     func equality(level: CGFloat = 0) -> Expression {
         var expr = comparison(level: level)
 
-        while match(types: [.bangEqual, .equalEqual]) {
+        while match(types: [.equal, .bangEqual, .equalEqual]) {
             let `operator` = previous
             let right = comparison(level: level)
             expr = BinaryNode(left: expr, operator: `operator`, right: right, level: level)
