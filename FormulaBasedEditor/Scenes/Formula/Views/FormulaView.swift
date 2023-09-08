@@ -7,7 +7,15 @@
 
 import UIKit
 
-final class FormulaView: UIView {
+protocol FormulaViewProtocol: UIView {
+    var uuid: String { get }
+    var content: String { get }
+}
+
+final class FormulaView: UIView, FormulaViewProtocol {
+    
+    var uuid: String
+    var content: String
 
     private var expressionViews: [ExpressionView] = []
 
@@ -18,7 +26,9 @@ final class FormulaView: UIView {
         return stack
     }()
 
-    init(expressions: [Expression]) {
+    init(content: String, expressions: [Expression], uuid: String = UUID().uuidString) {
+        self.uuid = uuid
+        self.content = content
         super.init(frame: .zero)
         buildExpressionViews(from: expressions)
         setupViews()
@@ -29,17 +39,26 @@ final class FormulaView: UIView {
     }
 
     private func sizeForView() -> CGSize {
-        var size = CGSize(width: Constants.widthPadding, height: Constants.heightPadding)
+        var size = CGSize()
         expressionViews.forEach { size.addWithHeightLimit($0.sizeForView()) }
         return CGSize(width: size.width, height: size.height)
     }
 
     private func setupViews() {
-        frame.size = sizeForView()
         addSubview(hStack)
         expressionViews.forEach { hStack.addArrangedSubview($0) }
+        
+        let size = sizeForView()
+        frame.size = CGSize(
+            width: size.width + Constants.hPadding,
+            height: size.height + Constants.vPadding
+        )
+        
         hStack
-            .fitToSuperview()
+            .fixedWidth(size.width)
+            .fixedHeight(size.height)
+            .centerVertically()
+            .centerHorizontally()
     }
 
     private func buildExpressionViews(from expressions: [Expression]) {
@@ -50,8 +69,8 @@ final class FormulaView: UIView {
 
 private extension FormulaView {
     enum Constants {
-        static let widthPadding: CGFloat = 4
-        static let heightPadding: CGFloat = 0
+        static let hPadding: CGFloat = 10
+        static let vPadding: CGFloat = 4
     }
 }
 
@@ -65,13 +84,6 @@ private final class FormulaExpressionBuilder: ExpressionVisitor {
 
     func visitVariableExpression(_ expr: VariableNode) -> ExpressionView {
         BaseExpresionView(text: expr.token.lexeme, level: CGFloat(expr.level))
-    }
-
-    func visitCallExpression(_ expr: CallNode) -> ExpressionView {
-        let callee = expr.callee.accept(visitor: self)
-        let arguments = expr.arguments.map { $0.accept(visitor: self) }
-//        return FunctionView(callee: callee, arguments: arguments)
-        return BaseExpresionView(text: "Nope", level: 0)
     }
 
     func visitBinaryExpression(_ expr: BinaryNode) -> ExpressionView {

@@ -14,7 +14,7 @@ class GroupingExpressionView: UIView, ExpressionView {
     private var leftBrace: BraceExpressionView
     private var rightBrace: BraceExpressionView
 
-    private lazy var stackView: UIStackView = {
+    private let stackView: UIStackView = {
         let stack = UIStackView()
         stack.alignment = .center
         stack.axis = .horizontal

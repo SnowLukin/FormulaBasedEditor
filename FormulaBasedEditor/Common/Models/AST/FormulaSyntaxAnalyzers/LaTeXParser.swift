@@ -102,46 +102,11 @@ private extension LaTeXParser {
             let right = unary(level: level)
             return UnaryNode(operator: `operator`, right: right, level: level)
         }
-
-        return call(level: level)
-    }
-
-    func call(level: CGFloat) -> Expression {
-        var expr = primary(level: level)
-
-        while true {
-            if match(types: [.leftParen]) {
-                expr = finishCall(callee: expr, level: level + 1)
-            } else {
-                break
-            }
-        }
-
-        return expr
-    }
-
-    func finishCall(callee: Expression, level: CGFloat) -> Expression {
-        var arguments: [Expression] = []
-
-        if !check(type: .rightParen) {
-            repeat {
-                arguments.append(equality(level: level + 1))
-            } while match(types: [.comma])
-        }
-
-        if !check(type: .rightParen) {
-            print("Expect ')' after arguments.")
-            _ = advance()
-            return CallNode(callee: callee, arguments: arguments, level: level)
-        }
-
-        _ = advance()
-        return CallNode(callee: callee, arguments: arguments, level: level)
+        return primary(level: level)
     }
 
     func primary(level: CGFloat) -> Expression {
         if match(types: [.number]) {
-            print("Here")
             return VariableNode(token: previous, level: level)
         }
 
@@ -158,7 +123,6 @@ private extension LaTeXParser {
             return GroupingNode(expression: expr, level: level)
         }
 
-        print("Expect expression.")
         let token = advance()
         print(token)
         return VariableNode(token: token, level: level)

@@ -18,7 +18,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         window?.makeKeyAndVisible()
 
-        let currentDocumentVC = CurrentDocumentViewController()
         let documentsVC = DocumentsViewController()
         let navigationVC = UINavigationController(rootViewController: documentsVC)
         window?.rootViewController = navigationVC

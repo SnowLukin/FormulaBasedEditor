@@ -16,12 +16,12 @@ protocol FormulaDataStore {
     
 }
 
-class FormulaInteractor: FormulaBusinessLogic, FormulaDataStore {
+final class FormulaInteractor: FormulaBusinessLogic, FormulaDataStore {
     var presenter: FormulaPresentationLogic?
     var worker: FormulaWorker?
 
     func renderFormula(text: String) {
         guard let formulaView = worker?.renderFormulaView(with: text) else { return }
-        presenter?.presentRenderedFormula(view: formulaView)
+        presenter?.presentRenderedFormula(formulaView)
     }
 }

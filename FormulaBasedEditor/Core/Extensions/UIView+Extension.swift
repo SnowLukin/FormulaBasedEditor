@@ -367,6 +367,15 @@ extension UIView {
     ) -> Self {
         bottom(constant, to: view, anchor: view.topAnchor, priority: priority)
     }
+    
+    @discardableResult
+    func bottomToHorizontalCenter(
+        of view: UIView,
+        constant: CGFloat = 0,
+        priority: UILayoutPriority = .required
+    ) -> Self {
+        bottom(constant, to: view, anchor: view.centerYAnchor, priority: priority)
+    }
 
     @discardableResult
     func topToBottom(

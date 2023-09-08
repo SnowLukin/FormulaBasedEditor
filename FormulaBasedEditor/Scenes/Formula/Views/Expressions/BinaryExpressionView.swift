@@ -26,6 +26,7 @@ final class BinaryExpressionView: UIView, ExpressionView {
         let stack = UIStackView()
         stack.axis = .horizontal
         stack.alignment = .center
+        stack.distribution = .fillProportionally
         stack.spacing = Constants.spacing
         return stack
     }()
@@ -48,7 +49,7 @@ final class BinaryExpressionView: UIView, ExpressionView {
         let leftTermSize = leftTerm.sizeForView()
         let rightTermSize = rightTerm.sizeForView()
         let operatorSize = binaryOperatorTerm.sizeForView()
-        let width = leftTermSize.width + operatorSize.width + rightTermSize.width + 2 * Constants.spacing
+        let width = leftTermSize.width + operatorSize.width + rightTermSize.width + Constants.spacing * 4
         let height = max(leftTermSize.height, rightTermSize.height, operatorSize.height)
         return CGSize(width: width, height: height)
     }
@@ -57,18 +58,10 @@ final class BinaryExpressionView: UIView, ExpressionView {
         addSubview(hStack)
         hStack.addArrangedSubview(leftTerm)
         if binaryOperator == .mult {
-            let container = UIView()
-            container.addSubview(multOperator)
-            hStack.addArrangedSubview(container)
-            container
-                .fixedWidth(binaryOperatorTerm.sizeForView().width)
-                .fixedHeight(binaryOperatorTerm.sizeForView().height)
-                .centerVertically()
+            hStack.addArrangedSubview(multOperator)
             multOperator
-                .equalHeight(1/1.5, with: container)
+                .fixedHeight(binaryOperatorTerm.sizeForView().height / 1.5)
                 .fixedWidth(binaryOperatorTerm.sizeForView().width)
-                .centerHorizontally()
-                .centerVertically()
         } else {
             hStack.addArrangedSubview(binaryOperatorTerm)
         }
@@ -78,7 +71,50 @@ final class BinaryExpressionView: UIView, ExpressionView {
         fixedHeight(size.height)
         fixedWidth(size.width)
         hStack
-            .fitToSuperview()
+            .fixedHeight(size.height)
+            .fixedWidth(size.width)
+            .centerVertically()
+            .centerHorizontally()
+    }
+    
+    private func setupMult() {
+        let container = UIView()
+        addSubviews(leftTerm, container, rightTerm)
+        container.addSubview(multOperator)
+        
+        leftTerm
+            .leading()
+            .centerHorizontally()
+        container
+            .fixedWidth(binaryOperatorTerm.sizeForView().width)
+            .fixedHeight(binaryOperatorTerm.sizeForView().height)
+            .leading(5, to: leftTerm)
+        rightTerm
+            .leading(5, to: container)
+            .centerHorizontally()
+        multOperator
+            .equalHeight(1/1.5, with: container)
+            .fixedWidth(binaryOperatorTerm.sizeForView().width)
+            .centerHorizontally()
+            .centerVertically()
+    }
+    
+    private func setupBinary() {
+        addSubviews(leftTerm, binaryOperatorTerm, rightTerm)
+        leftTerm
+            .centerHorizontally()
+            .fixedWidth(leftTerm.sizeForView().width)
+            .leading()
+        binaryOperatorTerm
+            .fixedWidth(11)
+            .leading(5, to: leftTerm.trailingAnchor)
+            .centerHorizontally()
+        rightTerm
+            .top()
+            .bottom()
+            .leading(5, to: binaryOperatorTerm.trailingAnchor)
+            .trailing()
+            .centerHorizontally()
     }
 }
 
@@ -90,6 +126,6 @@ extension BinaryExpressionView {
     }
 
     private enum Constants {
-        static let spacing: CGFloat = 1
+        static let spacing: CGFloat = 2
     }
 }

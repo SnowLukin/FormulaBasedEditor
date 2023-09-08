@@ -11,7 +11,6 @@ protocol ExpressionVisitor {
     associatedtype ExpressionReturnType
     
     func visitVariableExpression(_ expr: VariableNode) -> ExpressionReturnType
-    func visitCallExpression(_ expr: CallNode) -> ExpressionReturnType
     func visitBinaryExpression(_ expr: BinaryNode) -> ExpressionReturnType
     func visitPowerExpression(_ expr: PowerNode) -> ExpressionReturnType
     func visitGroupingExpression(_ expr: GroupingNode) -> ExpressionReturnType
@@ -32,16 +31,6 @@ struct VariableNode: Expression, Levelable {
     
     func accept<T>(visitor: T) -> T.ExpressionReturnType where T : ExpressionVisitor {
         visitor.visitVariableExpression(self)
-    }
-}
-
-struct CallNode: Expression, Levelable {
-    let callee: Expression
-    let arguments: [Expression]
-    var level: CGFloat
-    
-    func accept<T>(visitor: T) -> T.ExpressionReturnType where T : ExpressionVisitor {
-        visitor.visitCallExpression(self)
     }
 }
 

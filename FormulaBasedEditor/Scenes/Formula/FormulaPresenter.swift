@@ -9,13 +9,13 @@
 import UIKit
 
 protocol FormulaPresentationLogic {
-    func presentRenderedFormula(view: UIView)
+    func presentRenderedFormula(_ view: FormulaViewProtocol)
 }
 
-class FormulaPresenter: FormulaPresentationLogic {
+final class FormulaPresenter: FormulaPresentationLogic {
     weak var viewController: FormulaDisplayLogic?
 
-    func presentRenderedFormula(view: UIView) {
-        viewController?.displayRenderedFormula(view: view)
+    func presentRenderedFormula(_ view: FormulaViewProtocol) {
+        viewController?.addFormulaAttachment(view)
     }
 }

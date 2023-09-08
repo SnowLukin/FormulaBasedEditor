@@ -9,14 +9,6 @@
 import UIKit
 
 enum CurrentDocument {
-
-    struct Document: Hashable {
-        var title: String
-        var attributedText: NSAttributedString
-        var base64Images: [String : String] // [Id : Value]
-        var lastEditedDate: NSDate
-    }
-
     enum UIComponents {
         struct EquationButtonViewModel {
             let title: String
@@ -24,20 +16,10 @@ enum CurrentDocument {
         }
     }
     
-    enum Save {
-        struct Request {
-            let title: String
-            let attributedString: NSMutableAttributedString
-        }
-        
-        struct Response {
-            let success: Bool
-            let error: Error?
-        }
-        
-        struct ViewModel {
-            let title: String
-            let message: String
+    enum FormulaParameters {
+        struct Content {
+            let content: String
+            let range: NSRange
         }
     }
 }

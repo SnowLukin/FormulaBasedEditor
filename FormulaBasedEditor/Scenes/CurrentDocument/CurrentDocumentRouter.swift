@@ -9,7 +9,7 @@
 import UIKit
 
 protocol CurrentDocumentRoutingLogic {
-    func navigateToFormulaViewController()
+    func navigateToFormulaViewController(with params: CurrentDocument.FormulaParameters.Content?)
 }
 
 protocol CurrentDocumentDataPassing {
@@ -20,9 +20,13 @@ class CurrentDocumentRouter: NSObject, CurrentDocumentRoutingLogic, CurrentDocum
     weak var viewController: CurrentDocumentViewController?
     var dataStore: CurrentDocumentDataStore?
     
-    func navigateToFormulaViewController() {
+    func navigateToFormulaViewController(with params: CurrentDocument.FormulaParameters.Content? = nil) {
         let formulaViewController = FormulaViewController()
         formulaViewController.delegate = viewController
-        viewController?.present(formulaViewController, animated: true, completion: nil)
+        if let params {
+            formulaViewController.configure(with: params.content, range: params.range)
+        }
+        let navigationController = UINavigationController(rootViewController: formulaViewController)
+        viewController?.present(navigationController, animated: true, completion: nil)
     }
 }

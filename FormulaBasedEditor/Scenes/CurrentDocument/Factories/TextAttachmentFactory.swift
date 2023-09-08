@@ -8,8 +8,8 @@
 import UIKit
 
 enum TextAttachmentFactory {
-    static func makeVCenteredAttachment(image: UIImage, font: UIFont?) -> NSTextAttachment {
-        let textAttachment = VerticallyCenteredTextAttachment()
+    static func makeFormulaAttachment(image: UIImage, font: UIFont?) -> FormulaTextAttachment {
+        let textAttachment = FormulaTextAttachment()
         textAttachment.image = image
         textAttachment.font = font
         return textAttachment
