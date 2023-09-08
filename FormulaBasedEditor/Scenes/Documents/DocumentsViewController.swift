@@ -85,7 +85,7 @@ class DocumentsViewController: UIViewController, DocumentsDisplayLogic {
 
     func fetchDocuments() {
         let documents = DocumentStorageManager.shared.fetchDocuments()
-        self.documents = documents.sorted(by: { $0.wrappedLastEdit < $1.wrappedLastEdit })
+        self.documents = documents.sorted(by: { $0.wrappedLastEdit > $1.wrappedLastEdit })
         searchedDocuments = self.documents
     }
 
