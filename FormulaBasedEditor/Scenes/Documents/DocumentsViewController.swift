@@ -15,10 +15,14 @@ protocol DocumentsDisplayLogic: AnyObject {
 class DocumentsViewController: UIViewController, DocumentsDisplayLogic {
     var interactor: DocumentsBusinessLogic?
     var router: (NSObjectProtocol & DocumentsRoutingLogic & DocumentsDataPassing)?
+    
+    weak var addDocumentAlertAction : UIAlertAction?
 
     private var documents: [Document] = []
+    private var searchedDocuments: [Document] = []
 
     private let documentsTableView = UITableView(frame: .zero, style: .insetGrouped)
+    private let searchController = UISearchController()
 
     private let bottomBar: UIView = {
         let view = UIView()
@@ -57,7 +61,35 @@ class DocumentsViewController: UIViewController, DocumentsDisplayLogic {
         setup()
     }
     
-    // MARK: Setup
+    // MARK: Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupViews()
+        setupAccessibility()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        title = "Документы"
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: true)
+        documentsTableView.setEditing(editing, animated: true)
+        self.editButtonItem.title = editing ? "Готово" : "Изменить"
+    }
+
+    // MARK: Public
+
+    func fetchDocuments() {
+        let documents = DocumentStorageManager.shared.fetchDocuments()
+        self.documents = documents.sorted(by: { $0.wrappedLastEdit < $1.wrappedLastEdit })
+        searchedDocuments = self.documents
+    }
+
+    // MARK: Private
     
     private func setup() {
         let interactor = DocumentsInteractor()
@@ -70,28 +102,6 @@ class DocumentsViewController: UIViewController, DocumentsDisplayLogic {
         router.viewController = self
         router.dataStore = interactor
     }
-    
-    // MARK: Lifecycle
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupViews()
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        title = "Документы"
-        navigationController?.navigationBar.prefersLargeTitles = true
-    }
-
-    // MARK: Public
-
-    func fetchDocuments() {
-        let documents = DocumentStorageManager.shared.fetchDocuments()
-        self.documents = documents.sorted(by: { $0.wrappedLastEdit < $1.wrappedLastEdit })
-    }
-
-    // MARK: Private
 
     private func setupViews() {
         view.addSubviews(documentsTableView, emptyListLabel, bottomBar)
@@ -99,31 +109,40 @@ class DocumentsViewController: UIViewController, DocumentsDisplayLogic {
         updateView()
         setupTableView()
         setupAddDocumentButton()
+        setupSearchController()
 
         documentsTableView
             .fitToSuperview()
         bottomBar
-            .fixedHeight(60)
+            .fixedHeight(100)
             .leadingAndTrailing()
-            .safeAreaBottom()
+            .bottom()
         addDocumentButton
             .fixedHeight(40)
             .fixedWidth(40)
             .trailing(20)
-            .centerVertically()
+            .top(10)
         emptyListLabel
             .centerVertically()
             .centerHorizontally()
     }
 
     private func setupTableView() {
+        navigationItem.rightBarButtonItem = self.editButtonItem
+        navigationItem.rightBarButtonItem?.title = "Изменить"
         documentsTableView.delegate = self
         documentsTableView.dataSource = self
-        documentsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "documentsTableViewCell")
+        documentsTableView.register(DocumentTableViewCell.self, forCellReuseIdentifier: DocumentTableViewCell.reuseIdentifier)
     }
 
     private func setupAddDocumentButton() {
         addDocumentButton.addTarget(self, action: #selector(addDocumentButtonTapped), for: .touchUpInside)
+    }
+    
+    private func setupSearchController() {
+        searchController.searchBar.placeholder = " Поиск..."
+        searchController.searchResultsUpdater = self
+        navigationItem.searchController = searchController
     }
 
     private func updateView() {
@@ -132,6 +151,26 @@ class DocumentsViewController: UIViewController, DocumentsDisplayLogic {
         documentsTableView.isScrollEnabled = !documents.isEmpty
         documentsTableView.reloadData()
     }
+    
+    private func setupAccessibility() {
+        emptyListLabel.isAccessibilityElement = true
+        emptyListLabel.accessibilityIdentifier = "DocumentsAccessibility.emptyListLabel"
+        emptyListLabel.accessibilityLabel = "Пустой список."
+        emptyListLabel.accessibilityHint = "Список пуст. Добавьте документы."
+        emptyListLabel.accessibilityTraits = .staticText
+        
+        addDocumentButton.isAccessibilityElement = true
+        addDocumentButton.accessibilityIdentifier = "DocumentsAccessibility.addDocumentButton"
+        addDocumentButton.accessibilityLabel = "Создать документ."
+        addDocumentButton.accessibilityValue = "По нажатию откроется окно ввода названия документа."
+        addDocumentButton.accessibilityHint = "Нажмите чтобы создать новый документ."
+        addDocumentButton.accessibilityTraits = .button
+        
+        searchController.isAccessibilityElement = true
+        searchController.accessibilityLabel = "Поиск документов."
+        searchController.accessibilityHint = "Нажмите чтобы выполнить поиск документов по названию."
+        searchController.accessibilityTraits = .searchField
+    }
 
     @objc func addDocumentButtonTapped() {
         let alertController = UIAlertController(
@@ -139,40 +178,97 @@ class DocumentsViewController: UIViewController, DocumentsDisplayLogic {
             message: "Введите название документа",
             preferredStyle: .alert
         )
-        alertController.addTextField()
+        alertController.addTextField { textField in
+            textField.placeholder = "Имя документа"
+            textField.addTarget(self, action: #selector(self.alertTextDidChanged), for: .editingChanged)
+        }
+        
+        let cancelAction = UIAlertAction(title: "Отменить", style: .cancel)
 
         let submitAction = UIAlertAction(title: "Создать", style: .default) { [unowned alertController] _ in
             let answer = alertController.textFields![0]
             guard let title = answer.text else { return }
             let params = Document.Parameters(title: title, text: nil)
-            DocumentStorageManager.shared.createDocument(with: params)
+            DocumentStorageManager.shared.create(with: params)
             self.updateView()
         }
 
+        alertController.addAction(cancelAction)
         alertController.addAction(submitAction)
+        
+        self.addDocumentAlertAction = submitAction
+        addDocumentAlertAction?.isEnabled = false
 
         present(alertController, animated: true)
+    }
+    
+    @objc func alertTextDidChanged(_ sender: UITextField) {
+        let trimmedText = sender.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard
+            let text = trimmedText,
+            !text.isEmpty,
+            !documents.contains(where: { $0.title == text })
+        else {
+            addDocumentAlertAction?.accessibilityValue = "Неактивная кнопка. Имя документа должно быть уникально и не быть пустой строкой."
+            addDocumentAlertAction?.isEnabled = false
+            return
+        }
+        addDocumentAlertAction?.isEnabled = true
+        addDocumentAlertAction?.accessibilityValue = nil
     }
 }
 
 extension DocumentsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        documents.count
+        searchedDocuments.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "documentsTableViewCell", for: indexPath)
-        let document = documents[indexPath.row]
-        cell.textLabel?.text = document.title
-        cell.detailTextLabel?.text = document.text?.string
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: DocumentTableViewCell.reuseIdentifier, for: indexPath) as? DocumentTableViewCell else { return UITableViewCell() }
+        let document = searchedDocuments[indexPath.row]
+        cell.configure(title: document.title ?? "", subtitle: document.wrappedLastEdit.formatedString())
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = CurrentDocumentViewController()
-        let document = documents[indexPath.row]
+        let document = searchedDocuments[indexPath.row]
         vc.configure(with: document)
         tableView.deselectRow(at: indexPath, animated: true)
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func tableView(
+        _ tableView: UITableView,
+        commit editingStyle: UITableViewCell.EditingStyle,
+        forRowAt indexPath: IndexPath
+    ) {
+        if editingStyle == .delete {
+            let document = searchedDocuments[indexPath.row]
+            documents.removeAll(where: { $0.uuid == document.uuid })
+            searchedDocuments.remove(at: indexPath.row)
+            DocumentStorageManager.shared.delete(with: document.uuid)
+            documentsTableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        true
+    }
+}
+
+// MARK: - UISearchResultsUpdating
+
+extension DocumentsViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        if let searchText = searchController.searchBar.text, !searchText.isEmpty {
+            searchedDocuments = documents.filter { document in
+                guard let title = document.title else { return true }
+                return title.lowercased().contains(searchText.lowercased())
+            }
+        } else {
+            searchedDocuments = documents
+        }
+        documentsTableView.reloadData()
     }
 }

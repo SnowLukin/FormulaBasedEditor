@@ -37,24 +37,23 @@ final class PowerExpressionView: UIView, ExpressionView {
         let baseSize = baseTerm.sizeForView()
         let powerSize = powerTerm.sizeForView()
         let width = baseSize.width + powerSize.width
-        let height = max(baseSize.height, powerSize.height + 15)
+        let height = baseSize.height + powerSize.height * Constants.powerHeightMultiplier
         return CGSize(width: width, height: height)
     }
 
     private func setupViews() {
-        addSubview(hStack)
-        hStack.addArrangedSubview(baseTerm)
-        hStack.addArrangedSubview(powerTerm)
+        addSubviews(baseTerm, powerTerm)
 
         let size = sizeForView()
         fixedWidth(size.width)
         fixedHeight(size.height)
-        hStack
-            .fitToSuperview()
         baseTerm
+            .leading()
             .bottom()
+            .top()
         powerTerm
             .top()
+            .trailing()
     }
 }
 
@@ -62,5 +61,6 @@ extension PowerExpressionView {
     private enum Constants {
         static let heightPadding: CGFloat = 4
         static let widthPadding: CGFloat = 3
+        static let powerHeightMultiplier: CGFloat = 2
     }
 }

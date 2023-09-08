@@ -8,8 +8,8 @@
 
 import UIKit
 
-class FormulaWorker {
-    func renderFormulaView(with text: String) -> UIView {
+final class FormulaWorker {
+    func renderFormulaView(with text: String) -> FormulaViewProtocol {
         FormulaFactory.createFormulaView(for: text)
     }
 }

@@ -8,6 +8,6 @@
 
 import UIKit
 
-class CurrentDocumentWorker {
+final class CurrentDocumentWorker {
     
 }

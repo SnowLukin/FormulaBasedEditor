@@ -50,10 +50,6 @@ extension LaTeXASTPrinter: ExpressionVisitor {
         "\(getNode(expr.value))^\(getNode(expr.power))"
     }
     
-    func visitCallExpression(_ expr: CallNode) -> String {
-        "\\\(getNode(expr.callee))\\left(\(getNodes(expr.arguments))\\right)"
-    }
-    
     func visitGroupingExpression(_ expr: GroupingNode) -> String {
         "\\left(\(getNode(expr.expression))\\right)"
     }

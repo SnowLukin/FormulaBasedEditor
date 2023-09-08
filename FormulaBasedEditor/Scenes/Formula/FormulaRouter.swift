@@ -16,7 +16,7 @@ protocol FormulaDataPassing {
     var dataStore: FormulaDataStore? { get }
 }
 
-class FormulaRouter: NSObject, FormulaRoutingLogic, FormulaDataPassing {
+final class FormulaRouter: NSObject, FormulaRoutingLogic, FormulaDataPassing {
     weak var viewController: FormulaViewController?
     var dataStore: FormulaDataStore?
     

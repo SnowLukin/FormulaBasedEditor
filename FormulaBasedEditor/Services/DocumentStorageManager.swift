@@ -20,16 +20,16 @@ final class DocumentStorageManager {
         appDelegate.persistentContainer.viewContext
     }
 
-    func createDocument(with parameters: Document.Parameters) {
-        guard let documentEntity = NSEntityDescription.entity(
-            forEntityName: Constants.documentEntityName,
+    func create(with parameters: Document.Parameters) {
+        guard let entity = NSEntityDescription.entity(
+            forEntityName: Constants.entityName,
             in: context
         ) else {
             assertionFailure("Failed saving document")
             return
         }
-        let document = Document(entity: documentEntity, insertInto: context)
-        document.uuid = UUID()
+        let document = Document(entity: entity, insertInto: context)
+        document.uuid = UUID().uuidString
         document.title = parameters.title
         document.text = parameters.text
         document.lastEdit = parameters.lastEdit
@@ -38,7 +38,7 @@ final class DocumentStorageManager {
     }
 
     func fetchDocuments() -> [Document] {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Constants.documentEntityName)
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Constants.entityName)
         do {
             return try context.fetch(fetchRequest) as! [Document]
         } catch {
@@ -47,21 +47,21 @@ final class DocumentStorageManager {
         return []
     }
 
-    func fetchDocument(with uuid: UUID) -> Document? {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Constants.documentEntityName)
-        fetchRequest.predicate = NSPredicate(format: "uuid == %@", uuid as CVarArg)
+    func fetch(with uuid: String) -> Document? {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Constants.entityName)
+        fetchRequest.predicate = NSPredicate(format: "uuid == %@", uuid)
         do {
             let documents = try? context.fetch(fetchRequest) as? [Document]
             return documents?.first
         }
     }
 
-    func updateDocument(
-        uuid: UUID,
+    func update(
+        uuid: String,
         with parameters: Document.Parameters
     ) {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Constants.documentEntityName)
-        fetchRequest.predicate = NSPredicate(format: "uuid == %@", uuid as CVarArg)
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Constants.entityName)
+        fetchRequest.predicate = NSPredicate(format: "uuid == %@", uuid)
         do {
             let documents = try context.fetch(fetchRequest) as! [Document]
             guard let document = documents.first else { return }
@@ -75,9 +75,9 @@ final class DocumentStorageManager {
         appDelegate.saveContext()
     }
 
-    func deleteDocument(with uuid: UUID) {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Constants.documentEntityName)
-        fetchRequest.predicate = NSPredicate(format: "uuid == %@", uuid as CVarArg)
+    func delete(with uuid: String) {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Constants.entityName)
+        fetchRequest.predicate = NSPredicate(format: "uuid == %@", uuid)
         do {
             guard let documents = try? context.fetch(fetchRequest) as? [Document],
                   let document = documents.first
@@ -88,30 +88,10 @@ final class DocumentStorageManager {
     }
 }
 
-// MARK: Formula Manager
-
-extension DocumentStorageManager {
-    private func addFormula(to document: Document, from params: LatexFormula.Parameters) {
-        guard let formulaEntity = NSEntityDescription.entity(
-            forEntityName: Constants.formulaEntityName,
-            in: context
-        ) else {
-            assertionFailure("Failed saving document")
-            return
-        }
-        let formula = LatexFormula(entity: formulaEntity, insertInto: context)
-        formula.uuid = UUID()
-        formula.content = params.content
-        formula.document = document
-        document.addToFormulas(formula)
-    }
-}
-
 // MARK: Constants
 
 extension DocumentStorageManager {
     private enum Constants {
-        static let documentEntityName = "Document"
-        static let formulaEntityName = "LatexFormula"
+        static let entityName = "Document"
     }
 }

@@ -15,7 +15,6 @@ final class BaseExpresionView: UILabel, ExpressionView {
         self.level = level
         super.init(frame: .zero)
         setupLabel(text: text)
-//        self.frame.size = sizeForView()
     }
 
     required init?(coder: NSCoder) {
@@ -33,6 +32,7 @@ final class BaseExpresionView: UILabel, ExpressionView {
 
     private func setupLabel(text: String) {
         self.text = text
+        self.textColor = .black
         self.textAlignment = .center
         self.font = UIFont.systemFont(
             ofSize: Constants.fontSize - level * Constants.fontLevelMultiplier
@@ -45,7 +45,7 @@ final class BaseExpresionView: UILabel, ExpressionView {
 
 private extension BaseExpresionView {
     enum Constants {
-        static let fontSize: CGFloat = 17
+        static let fontSize: CGFloat = 20
         static let fontLevelMultiplier: CGFloat = 6
         static let heightPadding: CGFloat = 2
         static let widthPadding: CGFloat = 3

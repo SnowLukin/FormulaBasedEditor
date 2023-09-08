@@ -8,14 +8,6 @@
 import UIKit
 
 extension String {
-
-    var imageFromBase64: UIImage? {
-        guard let imageData = Data(base64Encoded: self, options: .ignoreUnknownCharacters) else {
-            return nil
-        }
-        return UIImage(data: imageData)
-    }
-
     func width(withConstrainedHeight height: CGFloat, font: UIFont) -> CGFloat {
         let constraintRect = CGSize(width: .greatestFiniteMagnitude, height: height)
         let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [.font: font], context: nil)

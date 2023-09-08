@@ -8,11 +8,11 @@
 import UIKit
 
 enum FormulaFactory {
-    static func createFormulaView(for text: String) -> UIView {
+    static func createFormulaView(for text: String) -> FormulaViewProtocol {
         let scanner = LaTeXScanner(source: text)
         let tokens = scanner.scan()
         let parser = LaTeXParser(tokens: tokens)
         let expressions = parser.parse()
-        return FormulaView(expressions: expressions)
+        return FormulaView(content: text, expressions: expressions)
     }
 }

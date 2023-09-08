@@ -56,24 +56,24 @@ private extension LaTeXScanner {
             addToken(type: .comma)
         case ".":
             addToken(type: .dot)
-        case "-":
+        case "-", "–":
             addToken(type: .minus)
         case "+":
             addToken(type: .plus)
         case ";":
             addToken(type: .semicolon)
-        case "*":
+        case "*", "•":
             addToken(type: .star)
         case "^":
             addToken(type: .powerSign)
         case "!":
-            addToken(type: match("=") ? .bangEqual : .bang)
-        case "=":
-            addToken(type: match("=") ? .equalEqual : .equal)
+            addToken(type: match("=", "≠") ? .bangEqual : .bang)
+        case "=", "≠":
+            addToken(type: match("=", "≠") ? .equalEqual : .equal)
         case "<":
-            addToken(type: match("=") ? .lessEqual : .less)
+            addToken(type: match("=", "≠") ? .lessEqual : .less)
         case ">":
-            addToken(type: match("=") ? .greaterEqual : .greater)
+            addToken(type: match("=", "≠") ? .greaterEqual : .greater)
         case "/":
             addToken(type: .slash)
         case " ", "\r", "\t", "\n", "\"":
@@ -106,8 +106,8 @@ private extension LaTeXScanner {
         : source[source.index(source.startIndex, offsetBy: current + 1)]
     }
 
-    func match(_ expected: Character) -> Bool {
-        if isEnd || peek() != expected { return false }
+    func match(_ expected: Character...) -> Bool {
+        if isEnd || !expected.contains(peek()) { return false }
         current += 1
         return true
     }
@@ -124,24 +124,6 @@ private extension LaTeXScanner {
 
     func value() {
         while isAlphaNumeric(peek()) { _ = advance() }
-        let startIndex = source.index(source.startIndex, offsetBy: start)
-        let endIndex = source.index(source.startIndex, offsetBy: current)
-        let text = String(source[startIndex..<endIndex])
-        let type = Self.keywords[text] ?? .identifier
-        addToken(type: type)
+        addToken(type: .identifier)
     }
-}
-
-extension LaTeXScanner {
-    private static let keywords: [String: TokenType] = [
-        "frac": .frac,
-        "log": .fun,
-        "sin": .fun,
-        "cos": .fun,
-        "tan": .fun,
-        "cot": .fun,
-        "sqrt": .fun,
-        "sum": .sum,
-        "prod": .prod,
-    ]
 }

@@ -9,20 +9,20 @@ import UIKit
 
 final class FractionExpressionView: UIView, ExpressionView {
 
+    var level: CGFloat
     private var nominator: ExpressionView
     private var dominator: ExpressionView
-    var level: CGFloat
 
-    private lazy var vStack: UIStackView = {
+    private let vStack: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
         stack.alignment = .bottom
+        stack.spacing = Constants.vPadding
         return stack
     }()
 
-    private lazy var lineView: UIView = {
+    private let lineView: UIView = {
         let view = UIView()
-        let width = sizeForView().width
         view.backgroundColor = .black
         return view
     }()
@@ -43,28 +43,29 @@ final class FractionExpressionView: UIView, ExpressionView {
         let nominatorSize = nominator.sizeForView()
         let dominatorSize = dominator.sizeForView()
         let width = max(nominatorSize.width, dominatorSize.width)
-        let height = nominatorSize.height + dominatorSize.height + Constants.lineHeight
+        let height = nominatorSize.height + dominatorSize.height + Constants.lineHeight + Constants.vPadding * 2
         return CGSize(width: width, height: height)
     }
 
     private func setupViews() {
         addSubview(vStack)
-        vStack.addArrangedSubview(nominator)
-        vStack.addArrangedSubview(lineView)
-        vStack.addArrangedSubview(dominator)
+        vStack.addArrangedSubviews(nominator, lineView, dominator)
 
         let size = sizeForView()
-        fixedWidth(size.width)
-        fixedHeight(size.height)
+        fixedWidth(size.width + Constants.hPadding)
+        fixedHeight(size.height + Constants.vPadding)
 
         vStack
-            .fitToSuperview()
-        lineView
+            .fixedWidth(size.width)
+            .fixedHeight(size.height)
             .centerHorizontally()
-            .equalWidth(with: self)
-            .fixedHeight(Constants.lineHeight)
+            .centerVertically()
         nominator
             .centerHorizontally()
+        lineView
+            .equalWidth(with: vStack)
+            .centerHorizontally()
+            .fixedHeight(Constants.lineHeight)
         dominator
             .centerHorizontally()
     }
@@ -73,5 +74,7 @@ final class FractionExpressionView: UIView, ExpressionView {
 private extension FractionExpressionView {
     enum Constants {
         static let lineHeight: CGFloat = 1
+        static let hPadding: CGFloat = 4
+        static let vPadding: CGFloat = 4
     }
 }
