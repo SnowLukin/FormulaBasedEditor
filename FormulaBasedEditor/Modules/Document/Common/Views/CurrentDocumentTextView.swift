@@ -15,7 +15,8 @@ final class CurrentDocumentTextView: UITextView {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(frame: .zero, textContainer: nil)
+        setupView()
     }
     
     override func caretRect(for position: UITextPosition) -> CGRect {
