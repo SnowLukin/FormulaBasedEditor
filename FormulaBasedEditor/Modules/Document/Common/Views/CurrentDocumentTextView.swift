@@ -37,6 +37,9 @@ final class CurrentDocumentTextView: UITextView {
             image: image,
             font: font
         )
+        textAttachment.isAccessibilityElement = true
+        textAttachment.accessibilityLabel = view.content
+        textAttachment.accessibilityTraits = .image
         
         let attrStringWithImage = NSAttributedString(attachment: textAttachment)
 

@@ -59,12 +59,7 @@ final class DocumentDefaultView: UIViewController, DocumentView {
             .leadingAndTrailing()
     }
     
-    func setupAccessibility() {
-        documentTextView.isAccessibilityElement = true
-        documentTextView.accessibilityLabel = "Редактор текста"
-        documentTextView.accessibilityTraits = .allowsDirectInteraction
-        
-        equationButton.isAccessibilityElement = true
+    func setupAccessibility() {        
         equationButton.accessibilityLabel = "Добавить формулу"
         equationButton.accessibilityTraits = .button
     }
