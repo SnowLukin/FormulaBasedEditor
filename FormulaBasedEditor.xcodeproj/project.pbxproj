@@ -14,21 +14,8 @@
 		D73A67DE2A9B928C00DA5ADE /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A67DD2A9B928C00DA5ADE /* String+Extension.swift */; };
 		D73A67E02A9B929500DA5ADE /* CGSize+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A67DF2A9B929500DA5ADE /* CGSize+Extension.swift */; };
 		D73A67E22A9B929E00DA5ADE /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A67E12A9B929E00DA5ADE /* UIView+Extension.swift */; };
-		D73A67E42A9B92A700DA5ADE /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A67E32A9B92A700DA5ADE /* UIImage+Extension.swift */; };
 		D73A67EA2A9B937800DA5ADE /* FormulaBasedEditor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D73A67E82A9B937800DA5ADE /* FormulaBasedEditor.xcdatamodeld */; };
 		D73A67F02A9B943C00DA5ADE /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A67EC2A9B943C00DA5ADE /* Document.swift */; };
-		D73A67FA2A9B966C00DA5ADE /* DocumentsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A67F42A9B966C00DA5ADE /* DocumentsPresenter.swift */; };
-		D73A67FB2A9B966C00DA5ADE /* DocumentsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A67F52A9B966C00DA5ADE /* DocumentsInteractor.swift */; };
-		D73A67FC2A9B966C00DA5ADE /* DocumentsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A67F62A9B966C00DA5ADE /* DocumentsWorker.swift */; };
-		D73A67FD2A9B966C00DA5ADE /* DocumentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A67F72A9B966C00DA5ADE /* DocumentsViewController.swift */; };
-		D73A67FE2A9B966C00DA5ADE /* DocumentsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A67F82A9B966C00DA5ADE /* DocumentsModels.swift */; };
-		D73A67FF2A9B966C00DA5ADE /* DocumentsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A67F92A9B966C00DA5ADE /* DocumentsRouter.swift */; };
-		D73A680A2A9B96BD00DA5ADE /* CurrentDocumentInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68042A9B96BC00DA5ADE /* CurrentDocumentInteractor.swift */; };
-		D73A680B2A9B96BD00DA5ADE /* CurrentDocumentWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68052A9B96BC00DA5ADE /* CurrentDocumentWorker.swift */; };
-		D73A680C2A9B96BD00DA5ADE /* CurrentDocumentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68062A9B96BD00DA5ADE /* CurrentDocumentPresenter.swift */; };
-		D73A680D2A9B96BD00DA5ADE /* CurrentDocumentModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68072A9B96BD00DA5ADE /* CurrentDocumentModels.swift */; };
-		D73A680E2A9B96BD00DA5ADE /* CurrentDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68082A9B96BD00DA5ADE /* CurrentDocumentViewController.swift */; };
-		D73A680F2A9B96BD00DA5ADE /* CurrentDocumentRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68092A9B96BD00DA5ADE /* CurrentDocumentRouter.swift */; };
 		D73A68122A9B96C800DA5ADE /* TextAttachmentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68112A9B96C800DA5ADE /* TextAttachmentFactory.swift */; };
 		D73A68182A9B96EF00DA5ADE /* LaTeXParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68152A9B96EF00DA5ADE /* LaTeXParser.swift */; };
 		D73A68192A9B96EF00DA5ADE /* LaTeXScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68162A9B96EF00DA5ADE /* LaTeXScanner.swift */; };
@@ -45,20 +32,47 @@
 		D73A68362A9B978200DA5ADE /* PowerExpressionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68352A9B978200DA5ADE /* PowerExpressionView.swift */; };
 		D73A68392A9B978800DA5ADE /* BraceExpressionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68372A9B978800DA5ADE /* BraceExpressionView.swift */; };
 		D73A683A2A9B978800DA5ADE /* GroupingExpressionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68382A9B978800DA5ADE /* GroupingExpressionView.swift */; };
-		D73A683C2A9B979700DA5ADE /* FormulaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A683B2A9B979700DA5ADE /* FormulaView.swift */; };
-		D73A68432A9B97AF00DA5ADE /* FormulaWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A683D2A9B97AF00DA5ADE /* FormulaWorker.swift */; };
-		D73A68442A9B97AF00DA5ADE /* FormulaRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A683E2A9B97AF00DA5ADE /* FormulaRouter.swift */; };
-		D73A68452A9B97AF00DA5ADE /* FormulaModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A683F2A9B97AF00DA5ADE /* FormulaModels.swift */; };
-		D73A68462A9B97AF00DA5ADE /* FormulaInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68402A9B97AF00DA5ADE /* FormulaInteractor.swift */; };
-		D73A68472A9B97AF00DA5ADE /* FormulaPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68412A9B97AF00DA5ADE /* FormulaPresenter.swift */; };
-		D73A68482A9B97AF00DA5ADE /* FormulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68422A9B97AF00DA5ADE /* FormulaViewController.swift */; };
+		D73A683C2A9B979700DA5ADE /* MathFormulaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A683B2A9B979700DA5ADE /* MathFormulaView.swift */; };
 		D73A68572A9B98C600DA5ADE /* DocumentStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68562A9B98C600DA5ADE /* DocumentStorageManager.swift */; };
 		D73A68592A9B9CBC00DA5ADE /* NSAttributedStringTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73A68582A9B9CBC00DA5ADE /* NSAttributedStringTransformer.swift */; };
-		D772B64F2AA5B88A00ADE6C5 /* NSAttributedString+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = D772B64E2AA5B88A00ADE6C5 /* NSAttributedString+Font.swift */; };
 		D772B6512AA7347800ADE6C5 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D772B6502AA7347800ADE6C5 /* UIStackView+Extension.swift */; };
 		D772B6582AA8FCFB00ADE6C5 /* CurrentDocumentTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D772B6572AA8FCFB00ADE6C5 /* CurrentDocumentTextView.swift */; };
 		D772B65A2AA9250600ADE6C5 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D772B6592AA9250600ADE6C5 /* Date+Extension.swift */; };
-		D772B65D2AA92A7300ADE6C5 /* DocumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D772B65C2AA92A7300ADE6C5 /* DocumentTableViewCell.swift */; };
+		D7BC27812AD1CA1600E96CF8 /* DocumentsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC27802AD1CA1600E96CF8 /* DocumentsInteractor.swift */; };
+		D7BC27832AD1CA2500E96CF8 /* DocumentsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC27822AD1CA2500E96CF8 /* DocumentsPresenter.swift */; };
+		D7BC27852AD1CA2C00E96CF8 /* DocumentsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC27842AD1CA2C00E96CF8 /* DocumentsRouter.swift */; };
+		D7BC27872AD1CA3500E96CF8 /* DocumentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC27862AD1CA3500E96CF8 /* DocumentsView.swift */; };
+		D7BC278B2AD1D17E00E96CF8 /* DocumentsModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC278A2AD1D17E00E96CF8 /* DocumentsModuleBuilder.swift */; };
+		D7BC278D2AD1D1EF00E96CF8 /* DocumentsDefaultInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC278C2AD1D1EF00E96CF8 /* DocumentsDefaultInteractor.swift */; };
+		D7BC278F2AD1D1FA00E96CF8 /* DocumentsDefaultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC278E2AD1D1FA00E96CF8 /* DocumentsDefaultPresenter.swift */; };
+		D7BC27912AD1D20000E96CF8 /* DocumentsDefaultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC27902AD1D20000E96CF8 /* DocumentsDefaultRouter.swift */; };
+		D7BC27932AD1D20600E96CF8 /* DocumentsDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC27922AD1D20600E96CF8 /* DocumentsDefaultView.swift */; };
+		D7BC27972AD1D76D00E96CF8 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC27962AD1D76D00E96CF8 /* UIViewController+Extension.swift */; };
+		D7BC279B2AD1DC2400E96CF8 /* DocumentsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC279A2AD1DC2400E96CF8 /* DocumentsCollectionView.swift */; };
+		D7BC27AC2AD2082D00E96CF8 /* AddDocumentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC27AB2AD2082D00E96CF8 /* AddDocumentButton.swift */; };
+		D7BC27B12AD2263700E96CF8 /* DocumentInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC27B02AD2263700E96CF8 /* DocumentInteractor.swift */; };
+		D7BC27B32AD2264000E96CF8 /* DocumentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC27B22AD2264000E96CF8 /* DocumentPresenter.swift */; };
+		D7BC27B52AD2264700E96CF8 /* DocumentRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC27B42AD2264700E96CF8 /* DocumentRouter.swift */; };
+		D7BC27B72AD2265000E96CF8 /* DocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC27B62AD2265000E96CF8 /* DocumentView.swift */; };
+		D7BC27BA2AD2287E00E96CF8 /* DocumentDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC27B92AD2287E00E96CF8 /* DocumentDefaultView.swift */; };
+		D7BC27BC2AD2288B00E96CF8 /* DocumentDefaultInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC27BB2AD2288B00E96CF8 /* DocumentDefaultInteractor.swift */; };
+		D7BC27BE2AD2289500E96CF8 /* DocumentDefaultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC27BD2AD2289500E96CF8 /* DocumentDefaultPresenter.swift */; };
+		D7BC27C02AD2289F00E96CF8 /* DocumentDefaultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC27BF2AD2289F00E96CF8 /* DocumentDefaultRouter.swift */; };
+		D7BC27C22AD228AD00E96CF8 /* DocumentModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC27C12AD228AD00E96CF8 /* DocumentModuleBuilder.swift */; };
+		D7BC27C52AD2CD6800E96CF8 /* EquationNavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC27C42AD2CD6800E96CF8 /* EquationNavigationButton.swift */; };
+		D7BC27C82AD304DB00E96CF8 /* FormulaContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC27C72AD304DA00E96CF8 /* FormulaContent.swift */; };
+		D7BC27CD2AD32B0E00E96CF8 /* FormulaInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC27CC2AD32B0E00E96CF8 /* FormulaInteractor.swift */; };
+		D7BC27CF2AD32B1500E96CF8 /* FormulaPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC27CE2AD32B1500E96CF8 /* FormulaPresenter.swift */; };
+		D7BC27D12AD32B2400E96CF8 /* FormulaRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC27D02AD32B2400E96CF8 /* FormulaRouter.swift */; };
+		D7BC27D32AD32B6F00E96CF8 /* FormulaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC27D22AD32B6F00E96CF8 /* FormulaView.swift */; };
+		D7BC27D62AD32B7D00E96CF8 /* FormulaDefaultInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC27D52AD32B7D00E96CF8 /* FormulaDefaultInteractor.swift */; };
+		D7BC27D82AD32B8600E96CF8 /* FormulaDefaultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC27D72AD32B8600E96CF8 /* FormulaDefaultPresenter.swift */; };
+		D7BC27DA2AD32B9200E96CF8 /* FormulaDefaultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC27D92AD32B9200E96CF8 /* FormulaDefaultRouter.swift */; };
+		D7BC27DC2AD32B9A00E96CF8 /* FormulaDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC27DB2AD32B9A00E96CF8 /* FormulaDefaultView.swift */; };
+		D7BC27DF2AD339FC00E96CF8 /* FormulaTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC27DE2AD339FC00E96CF8 /* FormulaTextView.swift */; };
+		D7BC27E12AD34ACF00E96CF8 /* FormulaRenderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC27E02AD34ACF00E96CF8 /* FormulaRenderButton.swift */; };
+		D7BC27E32AD36B0400E96CF8 /* FormulaModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC27E22AD36B0400E96CF8 /* FormulaModuleBuilder.swift */; };
+		D7BC27E52AD36CFE00E96CF8 /* FormulaOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BC27E42AD36CFE00E96CF8 /* FormulaOutput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,21 +85,8 @@
 		D73A67DD2A9B928C00DA5ADE /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		D73A67DF2A9B929500DA5ADE /* CGSize+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Extension.swift"; sourceTree = "<group>"; };
 		D73A67E12A9B929E00DA5ADE /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		D73A67E32A9B92A700DA5ADE /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		D73A67E92A9B937800DA5ADE /* FormulaBasedEditor.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FormulaBasedEditor.xcdatamodel; sourceTree = "<group>"; };
 		D73A67EC2A9B943C00DA5ADE /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
-		D73A67F42A9B966C00DA5ADE /* DocumentsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentsPresenter.swift; sourceTree = "<group>"; };
-		D73A67F52A9B966C00DA5ADE /* DocumentsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentsInteractor.swift; sourceTree = "<group>"; };
-		D73A67F62A9B966C00DA5ADE /* DocumentsWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentsWorker.swift; sourceTree = "<group>"; };
-		D73A67F72A9B966C00DA5ADE /* DocumentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentsViewController.swift; sourceTree = "<group>"; };
-		D73A67F82A9B966C00DA5ADE /* DocumentsModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentsModels.swift; sourceTree = "<group>"; };
-		D73A67F92A9B966C00DA5ADE /* DocumentsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentsRouter.swift; sourceTree = "<group>"; };
-		D73A68042A9B96BC00DA5ADE /* CurrentDocumentInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentDocumentInteractor.swift; sourceTree = "<group>"; };
-		D73A68052A9B96BC00DA5ADE /* CurrentDocumentWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentDocumentWorker.swift; sourceTree = "<group>"; };
-		D73A68062A9B96BD00DA5ADE /* CurrentDocumentPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentDocumentPresenter.swift; sourceTree = "<group>"; };
-		D73A68072A9B96BD00DA5ADE /* CurrentDocumentModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentDocumentModels.swift; sourceTree = "<group>"; };
-		D73A68082A9B96BD00DA5ADE /* CurrentDocumentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentDocumentViewController.swift; sourceTree = "<group>"; };
-		D73A68092A9B96BD00DA5ADE /* CurrentDocumentRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentDocumentRouter.swift; sourceTree = "<group>"; };
 		D73A68112A9B96C800DA5ADE /* TextAttachmentFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextAttachmentFactory.swift; sourceTree = "<group>"; };
 		D73A68152A9B96EF00DA5ADE /* LaTeXParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaTeXParser.swift; sourceTree = "<group>"; };
 		D73A68162A9B96EF00DA5ADE /* LaTeXScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaTeXScanner.swift; sourceTree = "<group>"; };
@@ -102,20 +103,47 @@
 		D73A68352A9B978200DA5ADE /* PowerExpressionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerExpressionView.swift; sourceTree = "<group>"; };
 		D73A68372A9B978800DA5ADE /* BraceExpressionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BraceExpressionView.swift; sourceTree = "<group>"; };
 		D73A68382A9B978800DA5ADE /* GroupingExpressionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupingExpressionView.swift; sourceTree = "<group>"; };
-		D73A683B2A9B979700DA5ADE /* FormulaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaView.swift; sourceTree = "<group>"; };
-		D73A683D2A9B97AF00DA5ADE /* FormulaWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaWorker.swift; sourceTree = "<group>"; };
-		D73A683E2A9B97AF00DA5ADE /* FormulaRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaRouter.swift; sourceTree = "<group>"; };
-		D73A683F2A9B97AF00DA5ADE /* FormulaModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaModels.swift; sourceTree = "<group>"; };
-		D73A68402A9B97AF00DA5ADE /* FormulaInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaInteractor.swift; sourceTree = "<group>"; };
-		D73A68412A9B97AF00DA5ADE /* FormulaPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaPresenter.swift; sourceTree = "<group>"; };
-		D73A68422A9B97AF00DA5ADE /* FormulaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaViewController.swift; sourceTree = "<group>"; };
+		D73A683B2A9B979700DA5ADE /* MathFormulaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathFormulaView.swift; sourceTree = "<group>"; };
 		D73A68562A9B98C600DA5ADE /* DocumentStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentStorageManager.swift; sourceTree = "<group>"; };
 		D73A68582A9B9CBC00DA5ADE /* NSAttributedStringTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringTransformer.swift; sourceTree = "<group>"; };
-		D772B64E2AA5B88A00ADE6C5 /* NSAttributedString+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Font.swift"; sourceTree = "<group>"; };
 		D772B6502AA7347800ADE6C5 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		D772B6572AA8FCFB00ADE6C5 /* CurrentDocumentTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDocumentTextView.swift; sourceTree = "<group>"; };
 		D772B6592AA9250600ADE6C5 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
-		D772B65C2AA92A7300ADE6C5 /* DocumentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentTableViewCell.swift; sourceTree = "<group>"; };
+		D7BC27802AD1CA1600E96CF8 /* DocumentsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsInteractor.swift; sourceTree = "<group>"; };
+		D7BC27822AD1CA2500E96CF8 /* DocumentsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsPresenter.swift; sourceTree = "<group>"; };
+		D7BC27842AD1CA2C00E96CF8 /* DocumentsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsRouter.swift; sourceTree = "<group>"; };
+		D7BC27862AD1CA3500E96CF8 /* DocumentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsView.swift; sourceTree = "<group>"; };
+		D7BC278A2AD1D17E00E96CF8 /* DocumentsModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsModuleBuilder.swift; sourceTree = "<group>"; };
+		D7BC278C2AD1D1EF00E96CF8 /* DocumentsDefaultInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsDefaultInteractor.swift; sourceTree = "<group>"; };
+		D7BC278E2AD1D1FA00E96CF8 /* DocumentsDefaultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsDefaultPresenter.swift; sourceTree = "<group>"; };
+		D7BC27902AD1D20000E96CF8 /* DocumentsDefaultRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsDefaultRouter.swift; sourceTree = "<group>"; };
+		D7BC27922AD1D20600E96CF8 /* DocumentsDefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsDefaultView.swift; sourceTree = "<group>"; };
+		D7BC27962AD1D76D00E96CF8 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		D7BC279A2AD1DC2400E96CF8 /* DocumentsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsCollectionView.swift; sourceTree = "<group>"; };
+		D7BC27AB2AD2082D00E96CF8 /* AddDocumentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDocumentButton.swift; sourceTree = "<group>"; };
+		D7BC27B02AD2263700E96CF8 /* DocumentInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentInteractor.swift; sourceTree = "<group>"; };
+		D7BC27B22AD2264000E96CF8 /* DocumentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPresenter.swift; sourceTree = "<group>"; };
+		D7BC27B42AD2264700E96CF8 /* DocumentRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentRouter.swift; sourceTree = "<group>"; };
+		D7BC27B62AD2265000E96CF8 /* DocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentView.swift; sourceTree = "<group>"; };
+		D7BC27B92AD2287E00E96CF8 /* DocumentDefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDefaultView.swift; sourceTree = "<group>"; };
+		D7BC27BB2AD2288B00E96CF8 /* DocumentDefaultInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDefaultInteractor.swift; sourceTree = "<group>"; };
+		D7BC27BD2AD2289500E96CF8 /* DocumentDefaultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDefaultPresenter.swift; sourceTree = "<group>"; };
+		D7BC27BF2AD2289F00E96CF8 /* DocumentDefaultRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDefaultRouter.swift; sourceTree = "<group>"; };
+		D7BC27C12AD228AD00E96CF8 /* DocumentModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentModuleBuilder.swift; sourceTree = "<group>"; };
+		D7BC27C42AD2CD6800E96CF8 /* EquationNavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationNavigationButton.swift; sourceTree = "<group>"; };
+		D7BC27C72AD304DA00E96CF8 /* FormulaContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaContent.swift; sourceTree = "<group>"; };
+		D7BC27CC2AD32B0E00E96CF8 /* FormulaInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaInteractor.swift; sourceTree = "<group>"; };
+		D7BC27CE2AD32B1500E96CF8 /* FormulaPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaPresenter.swift; sourceTree = "<group>"; };
+		D7BC27D02AD32B2400E96CF8 /* FormulaRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaRouter.swift; sourceTree = "<group>"; };
+		D7BC27D22AD32B6F00E96CF8 /* FormulaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaView.swift; sourceTree = "<group>"; };
+		D7BC27D52AD32B7D00E96CF8 /* FormulaDefaultInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaDefaultInteractor.swift; sourceTree = "<group>"; };
+		D7BC27D72AD32B8600E96CF8 /* FormulaDefaultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaDefaultPresenter.swift; sourceTree = "<group>"; };
+		D7BC27D92AD32B9200E96CF8 /* FormulaDefaultRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaDefaultRouter.swift; sourceTree = "<group>"; };
+		D7BC27DB2AD32B9A00E96CF8 /* FormulaDefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaDefaultView.swift; sourceTree = "<group>"; };
+		D7BC27DE2AD339FC00E96CF8 /* FormulaTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaTextView.swift; sourceTree = "<group>"; };
+		D7BC27E02AD34ACF00E96CF8 /* FormulaRenderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaRenderButton.swift; sourceTree = "<group>"; };
+		D7BC27E22AD36B0400E96CF8 /* FormulaModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaModuleBuilder.swift; sourceTree = "<group>"; };
+		D7BC27E42AD36CFE00E96CF8 /* FormulaOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaOutput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,24 +178,12 @@
 			children = (
 				D73A67C72A9B8CAF00DA5ADE /* AppDelegate.swift */,
 				D73A67C92A9B8CAF00DA5ADE /* SceneDelegate.swift */,
-				D73A68552A9B98B100DA5ADE /* Services */,
-				D73A67DB2A9B927200DA5ADE /* Core */,
-				D73A67E52A9B931000DA5ADE /* Scenes */,
-				D73A68492A9B97BB00DA5ADE /* Common */,
+				D73A67E52A9B931000DA5ADE /* Modules */,
 				D73A67D02A9B8CB000DA5ADE /* Assets.xcassets */,
 				D73A67D22A9B8CB000DA5ADE /* LaunchScreen.storyboard */,
 				D73A67D52A9B8CB000DA5ADE /* Info.plist */,
 			);
 			path = FormulaBasedEditor;
-			sourceTree = "<group>";
-		};
-		D73A67DB2A9B927200DA5ADE /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				D73A67E72A9B935A00DA5ADE /* CoreData */,
-				D73A67DC2A9B927400DA5ADE /* Extensions */,
-			);
-			path = Core;
 			sourceTree = "<group>";
 		};
 		D73A67DC2A9B927400DA5ADE /* Extensions */ = {
@@ -176,31 +192,22 @@
 				D73A67DD2A9B928C00DA5ADE /* String+Extension.swift */,
 				D73A67DF2A9B929500DA5ADE /* CGSize+Extension.swift */,
 				D73A67E12A9B929E00DA5ADE /* UIView+Extension.swift */,
-				D73A67E32A9B92A700DA5ADE /* UIImage+Extension.swift */,
 				D772B6502AA7347800ADE6C5 /* UIStackView+Extension.swift */,
-				D772B64E2AA5B88A00ADE6C5 /* NSAttributedString+Font.swift */,
 				D772B6592AA9250600ADE6C5 /* Date+Extension.swift */,
+				D7BC27962AD1D76D00E96CF8 /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		D73A67E52A9B931000DA5ADE /* Scenes */ = {
+		D73A67E52A9B931000DA5ADE /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D7BC27892AD1D10400E96CF8 /* Base */,
 				D73A67F32A9B962000DA5ADE /* Documents */,
-				D73A68032A9B96A500DA5ADE /* CurrentDocument */,
+				D73A68032A9B96A500DA5ADE /* Document */,
 				D73A68262A9B973300DA5ADE /* Formula */,
 			);
-			path = Scenes;
-			sourceTree = "<group>";
-		};
-		D73A67E62A9B932700DA5ADE /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				D73A68542A9B987800DA5ADE /* Document */,
-				D73A68132A9B96D300DA5ADE /* AST */,
-			);
-			path = Models;
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		D73A67E72A9B935A00DA5ADE /* CoreData */ = {
@@ -214,37 +221,21 @@
 		D73A67F32A9B962000DA5ADE /* Documents */ = {
 			isa = PBXGroup;
 			children = (
-				D772B65B2AA92A6700ADE6C5 /* Cells */,
-				D73A67F52A9B966C00DA5ADE /* DocumentsInteractor.swift */,
-				D73A67F82A9B966C00DA5ADE /* DocumentsModels.swift */,
-				D73A67F42A9B966C00DA5ADE /* DocumentsPresenter.swift */,
-				D73A67F92A9B966C00DA5ADE /* DocumentsRouter.swift */,
-				D73A67F72A9B966C00DA5ADE /* DocumentsViewController.swift */,
-				D73A67F62A9B966C00DA5ADE /* DocumentsWorker.swift */,
+				D7BC277D2AD1C9D300E96CF8 /* Interfaces */,
+				D7BC277F2AD1C9ED00E96CF8 /* Implementations */,
+				D7BC277E2AD1C9E600E96CF8 /* Common */,
 			);
 			path = Documents;
 			sourceTree = "<group>";
 		};
-		D73A68032A9B96A500DA5ADE /* CurrentDocument */ = {
+		D73A68032A9B96A500DA5ADE /* Document */ = {
 			isa = PBXGroup;
 			children = (
-				D73A68102A9B96C000DA5ADE /* Factories */,
-				D73A68042A9B96BC00DA5ADE /* CurrentDocumentInteractor.swift */,
-				D73A68072A9B96BD00DA5ADE /* CurrentDocumentModels.swift */,
-				D73A68062A9B96BD00DA5ADE /* CurrentDocumentPresenter.swift */,
-				D73A68092A9B96BD00DA5ADE /* CurrentDocumentRouter.swift */,
-				D73A68082A9B96BD00DA5ADE /* CurrentDocumentViewController.swift */,
-				D73A68052A9B96BC00DA5ADE /* CurrentDocumentWorker.swift */,
+				D7BC27AD2AD225F000E96CF8 /* Interfaces */,
+				D7BC27AE2AD225F600E96CF8 /* Implementations */,
+				D7BC27AF2AD2260300E96CF8 /* Common */,
 			);
-			path = CurrentDocument;
-			sourceTree = "<group>";
-		};
-		D73A68102A9B96C000DA5ADE /* Factories */ = {
-			isa = PBXGroup;
-			children = (
-				D73A68112A9B96C800DA5ADE /* TextAttachmentFactory.swift */,
-			);
-			path = Factories;
+			path = Document;
 			sourceTree = "<group>";
 		};
 		D73A68132A9B96D300DA5ADE /* AST */ = {
@@ -279,33 +270,11 @@
 		D73A68262A9B973300DA5ADE /* Formula */ = {
 			isa = PBXGroup;
 			children = (
-				D73A68402A9B97AF00DA5ADE /* FormulaInteractor.swift */,
-				D73A683F2A9B97AF00DA5ADE /* FormulaModels.swift */,
-				D73A68412A9B97AF00DA5ADE /* FormulaPresenter.swift */,
-				D73A683E2A9B97AF00DA5ADE /* FormulaRouter.swift */,
-				D73A68422A9B97AF00DA5ADE /* FormulaViewController.swift */,
-				D73A683D2A9B97AF00DA5ADE /* FormulaWorker.swift */,
-				D73A682A2A9B974D00DA5ADE /* Views */,
-				D73A68272A9B973F00DA5ADE /* Factories */,
+				D7BC27CB2AD32B0200E96CF8 /* Interfaces */,
+				D7BC27CA2AD32AF700E96CF8 /* Implementations */,
+				D7BC27C92AD32AF200E96CF8 /* Common */,
 			);
 			path = Formula;
-			sourceTree = "<group>";
-		};
-		D73A68272A9B973F00DA5ADE /* Factories */ = {
-			isa = PBXGroup;
-			children = (
-				D73A68282A9B974A00DA5ADE /* FormulaFactory.swift */,
-			);
-			path = Factories;
-			sourceTree = "<group>";
-		};
-		D73A682A2A9B974D00DA5ADE /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				D73A683B2A9B979700DA5ADE /* FormulaView.swift */,
-				D73A682B2A9B975200DA5ADE /* Expressions */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		D73A682B2A9B975200DA5ADE /* Expressions */ = {
@@ -316,45 +285,10 @@
 				D73A682D2A9B977B00DA5ADE /* BinaryExpressionView.swift */,
 				D73A682F2A9B977B00DA5ADE /* FractionExpressionView.swift */,
 				D73A68352A9B978200DA5ADE /* PowerExpressionView.swift */,
-				D73A682C2A9B975A00DA5ADE /* GroupingExpression */,
+				D73A68382A9B978800DA5ADE /* GroupingExpressionView.swift */,
+				D73A68372A9B978800DA5ADE /* BraceExpressionView.swift */,
 			);
 			path = Expressions;
-			sourceTree = "<group>";
-		};
-		D73A682C2A9B975A00DA5ADE /* GroupingExpression */ = {
-			isa = PBXGroup;
-			children = (
-				D73A68372A9B978800DA5ADE /* BraceExpressionView.swift */,
-				D73A68382A9B978800DA5ADE /* GroupingExpressionView.swift */,
-			);
-			path = GroupingExpression;
-			sourceTree = "<group>";
-		};
-		D73A68492A9B97BB00DA5ADE /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				D73A67E62A9B932700DA5ADE /* Models */,
-				D73A684A2A9B97C100DA5ADE /* Views */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		D73A684A2A9B97C100DA5ADE /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				D73A68232A9B971300DA5ADE /* FormulaTextAttachment.swift */,
-				D772B6572AA8FCFB00ADE6C5 /* CurrentDocumentTextView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		D73A68542A9B987800DA5ADE /* Document */ = {
-			isa = PBXGroup;
-			children = (
-				D73A67EC2A9B943C00DA5ADE /* Document.swift */,
-				D73A68582A9B9CBC00DA5ADE /* NSAttributedStringTransformer.swift */,
-			);
-			path = Document;
 			sourceTree = "<group>";
 		};
 		D73A68552A9B98B100DA5ADE /* Services */ = {
@@ -365,12 +299,200 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		D772B65B2AA92A6700ADE6C5 /* Cells */ = {
+		D7BC277D2AD1C9D300E96CF8 /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
-				D772B65C2AA92A7300ADE6C5 /* DocumentTableViewCell.swift */,
+				D7BC27802AD1CA1600E96CF8 /* DocumentsInteractor.swift */,
+				D7BC27822AD1CA2500E96CF8 /* DocumentsPresenter.swift */,
+				D7BC27842AD1CA2C00E96CF8 /* DocumentsRouter.swift */,
+				D7BC27862AD1CA3500E96CF8 /* DocumentsView.swift */,
 			);
-			path = Cells;
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		D7BC277E2AD1C9E600E96CF8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D7BC27A72AD1E1D300E96CF8 /* Views */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		D7BC277F2AD1C9ED00E96CF8 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				D7BC278A2AD1D17E00E96CF8 /* DocumentsModuleBuilder.swift */,
+				D7BC27882AD1D0FE00E96CF8 /* Default */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		D7BC27882AD1D0FE00E96CF8 /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				D7BC278C2AD1D1EF00E96CF8 /* DocumentsDefaultInteractor.swift */,
+				D7BC278E2AD1D1FA00E96CF8 /* DocumentsDefaultPresenter.swift */,
+				D7BC27902AD1D20000E96CF8 /* DocumentsDefaultRouter.swift */,
+				D7BC27922AD1D20600E96CF8 /* DocumentsDefaultView.swift */,
+			);
+			path = Default;
+			sourceTree = "<group>";
+		};
+		D7BC27892AD1D10400E96CF8 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D73A68552A9B98B100DA5ADE /* Services */,
+				D73A67DC2A9B927400DA5ADE /* Extensions */,
+				D73A67E72A9B935A00DA5ADE /* CoreData */,
+				D7BC27E62AD36F9D00E96CF8 /* Entities */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D7BC27A72AD1E1D300E96CF8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D7BC279A2AD1DC2400E96CF8 /* DocumentsCollectionView.swift */,
+				D7BC27AB2AD2082D00E96CF8 /* AddDocumentButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D7BC27AD2AD225F000E96CF8 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				D7BC27B02AD2263700E96CF8 /* DocumentInteractor.swift */,
+				D7BC27B22AD2264000E96CF8 /* DocumentPresenter.swift */,
+				D7BC27B42AD2264700E96CF8 /* DocumentRouter.swift */,
+				D7BC27B62AD2265000E96CF8 /* DocumentView.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		D7BC27AE2AD225F600E96CF8 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				D7BC27C12AD228AD00E96CF8 /* DocumentModuleBuilder.swift */,
+				D7BC27B82AD2287300E96CF8 /* Default */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		D7BC27AF2AD2260300E96CF8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D7BC27C62AD304CE00E96CF8 /* Entities */,
+				D7BC27C32AD2CD6200E96CF8 /* Views */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		D7BC27B82AD2287300E96CF8 /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				D7BC27BB2AD2288B00E96CF8 /* DocumentDefaultInteractor.swift */,
+				D7BC27BD2AD2289500E96CF8 /* DocumentDefaultPresenter.swift */,
+				D7BC27BF2AD2289F00E96CF8 /* DocumentDefaultRouter.swift */,
+				D7BC27B92AD2287E00E96CF8 /* DocumentDefaultView.swift */,
+			);
+			path = Default;
+			sourceTree = "<group>";
+		};
+		D7BC27C32AD2CD6200E96CF8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D7BC27C42AD2CD6800E96CF8 /* EquationNavigationButton.swift */,
+				D772B6572AA8FCFB00ADE6C5 /* CurrentDocumentTextView.swift */,
+				D73A68232A9B971300DA5ADE /* FormulaTextAttachment.swift */,
+				D73A68112A9B96C800DA5ADE /* TextAttachmentFactory.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D7BC27C62AD304CE00E96CF8 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				D7BC27C72AD304DA00E96CF8 /* FormulaContent.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		D7BC27C92AD32AF200E96CF8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D7BC27E72AD36FC600E96CF8 /* Entities */,
+				D7BC27DD2AD330DD00E96CF8 /* Views */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		D7BC27CA2AD32AF700E96CF8 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				D7BC27E22AD36B0400E96CF8 /* FormulaModuleBuilder.swift */,
+				D7BC27D42AD32B7300E96CF8 /* Default */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		D7BC27CB2AD32B0200E96CF8 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				D7BC27CC2AD32B0E00E96CF8 /* FormulaInteractor.swift */,
+				D7BC27CE2AD32B1500E96CF8 /* FormulaPresenter.swift */,
+				D7BC27D02AD32B2400E96CF8 /* FormulaRouter.swift */,
+				D7BC27D22AD32B6F00E96CF8 /* FormulaView.swift */,
+				D7BC27E42AD36CFE00E96CF8 /* FormulaOutput.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		D7BC27D42AD32B7300E96CF8 /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				D7BC27D52AD32B7D00E96CF8 /* FormulaDefaultInteractor.swift */,
+				D7BC27D72AD32B8600E96CF8 /* FormulaDefaultPresenter.swift */,
+				D7BC27D92AD32B9200E96CF8 /* FormulaDefaultRouter.swift */,
+				D7BC27DB2AD32B9A00E96CF8 /* FormulaDefaultView.swift */,
+			);
+			path = Default;
+			sourceTree = "<group>";
+		};
+		D7BC27DD2AD330DD00E96CF8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D7BC27DE2AD339FC00E96CF8 /* FormulaTextView.swift */,
+				D7BC27E02AD34ACF00E96CF8 /* FormulaRenderButton.swift */,
+				D7BC27E82AD3717400E96CF8 /* MathFormula */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D7BC27E62AD36F9D00E96CF8 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				D73A67EC2A9B943C00DA5ADE /* Document.swift */,
+				D73A68582A9B9CBC00DA5ADE /* NSAttributedStringTransformer.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		D7BC27E72AD36FC600E96CF8 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				D73A68282A9B974A00DA5ADE /* FormulaFactory.swift */,
+				D73A68132A9B96D300DA5ADE /* AST */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		D7BC27E82AD3717400E96CF8 /* MathFormula */ = {
+			isa = PBXGroup;
+			children = (
+				D73A683B2A9B979700DA5ADE /* MathFormulaView.swift */,
+				D73A682B2A9B975200DA5ADE /* Expressions */,
+			);
+			path = MathFormula;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,53 +565,67 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D73A67FA2A9B966C00DA5ADE /* DocumentsPresenter.swift in Sources */,
-				D73A67FC2A9B966C00DA5ADE /* DocumentsWorker.swift in Sources */,
-				D73A67FB2A9B966C00DA5ADE /* DocumentsInteractor.swift in Sources */,
-				D73A67FF2A9B966C00DA5ADE /* DocumentsRouter.swift in Sources */,
 				D73A68122A9B96C800DA5ADE /* TextAttachmentFactory.swift in Sources */,
+				D7BC27DC2AD32B9A00E96CF8 /* FormulaDefaultView.swift in Sources */,
 				D772B6512AA7347800ADE6C5 /* UIStackView+Extension.swift in Sources */,
-				D73A680B2A9B96BD00DA5ADE /* CurrentDocumentWorker.swift in Sources */,
-				D73A68442A9B97AF00DA5ADE /* FormulaRouter.swift in Sources */,
+				D7BC27CD2AD32B0E00E96CF8 /* FormulaInteractor.swift in Sources */,
 				D73A67E22A9B929E00DA5ADE /* UIView+Extension.swift in Sources */,
+				D7BC27BC2AD2288B00E96CF8 /* DocumentDefaultInteractor.swift in Sources */,
 				D73A68362A9B978200DA5ADE /* PowerExpressionView.swift in Sources */,
-				D73A680C2A9B96BD00DA5ADE /* CurrentDocumentPresenter.swift in Sources */,
-				D73A67E42A9B92A700DA5ADE /* UIImage+Extension.swift in Sources */,
-				D73A67FE2A9B966C00DA5ADE /* DocumentsModels.swift in Sources */,
+				D7BC27E32AD36B0400E96CF8 /* FormulaModuleBuilder.swift in Sources */,
+				D7BC27D12AD32B2400E96CF8 /* FormulaRouter.swift in Sources */,
+				D7BC27DF2AD339FC00E96CF8 /* FormulaTextView.swift in Sources */,
 				D73A68332A9B977B00DA5ADE /* FractionExpressionView.swift in Sources */,
+				D7BC278F2AD1D1FA00E96CF8 /* DocumentsDefaultPresenter.swift in Sources */,
 				D73A68572A9B98C600DA5ADE /* DocumentStorageManager.swift in Sources */,
+				D7BC27912AD1D20000E96CF8 /* DocumentsDefaultRouter.swift in Sources */,
+				D7BC27D82AD32B8600E96CF8 /* FormulaDefaultPresenter.swift in Sources */,
 				D73A681A2A9B96EF00DA5ADE /* LaTeXPrinter.swift in Sources */,
-				D73A68452A9B97AF00DA5ADE /* FormulaModels.swift in Sources */,
 				D73A67DE2A9B928C00DA5ADE /* String+Extension.swift in Sources */,
 				D73A68182A9B96EF00DA5ADE /* LaTeXParser.swift in Sources */,
+				D7BC27BE2AD2289500E96CF8 /* DocumentDefaultPresenter.swift in Sources */,
 				D73A67EA2A9B937800DA5ADE /* FormulaBasedEditor.xcdatamodeld in Sources */,
 				D73A681E2A9B96FD00DA5ADE /* Token.swift in Sources */,
-				D73A680D2A9B96BD00DA5ADE /* CurrentDocumentModels.swift in Sources */,
-				D73A68432A9B97AF00DA5ADE /* FormulaWorker.swift in Sources */,
+				D7BC27872AD1CA3500E96CF8 /* DocumentsView.swift in Sources */,
+				D7BC27D62AD32B7D00E96CF8 /* FormulaDefaultInteractor.swift in Sources */,
+				D7BC27AC2AD2082D00E96CF8 /* AddDocumentButton.swift in Sources */,
+				D7BC27832AD1CA2500E96CF8 /* DocumentsPresenter.swift in Sources */,
+				D7BC27B12AD2263700E96CF8 /* DocumentInteractor.swift in Sources */,
 				D73A67E02A9B929500DA5ADE /* CGSize+Extension.swift in Sources */,
 				D73A683A2A9B978800DA5ADE /* GroupingExpressionView.swift in Sources */,
-				D73A68462A9B97AF00DA5ADE /* FormulaInteractor.swift in Sources */,
+				D7BC27B32AD2264000E96CF8 /* DocumentPresenter.swift in Sources */,
+				D7BC27C52AD2CD6800E96CF8 /* EquationNavigationButton.swift in Sources */,
+				D7BC27D32AD32B6F00E96CF8 /* FormulaView.swift in Sources */,
+				D7BC27932AD1D20600E96CF8 /* DocumentsDefaultView.swift in Sources */,
 				D73A68392A9B978800DA5ADE /* BraceExpressionView.swift in Sources */,
+				D7BC278D2AD1D1EF00E96CF8 /* DocumentsDefaultInteractor.swift in Sources */,
+				D7BC27B52AD2264700E96CF8 /* DocumentRouter.swift in Sources */,
+				D7BC27C22AD228AD00E96CF8 /* DocumentModuleBuilder.swift in Sources */,
+				D7BC278B2AD1D17E00E96CF8 /* DocumentsModuleBuilder.swift in Sources */,
 				D772B6582AA8FCFB00ADE6C5 /* CurrentDocumentTextView.swift in Sources */,
+				D7BC27852AD1CA2C00E96CF8 /* DocumentsRouter.swift in Sources */,
+				D7BC27972AD1D76D00E96CF8 /* UIViewController+Extension.swift in Sources */,
+				D7BC27E12AD34ACF00E96CF8 /* FormulaRenderButton.swift in Sources */,
+				D7BC27DA2AD32B9200E96CF8 /* FormulaDefaultRouter.swift in Sources */,
+				D7BC27C82AD304DB00E96CF8 /* FormulaContent.swift in Sources */,
+				D7BC27B72AD2265000E96CF8 /* DocumentView.swift in Sources */,
 				D73A67F02A9B943C00DA5ADE /* Document.swift in Sources */,
 				D73A68192A9B96EF00DA5ADE /* LaTeXScanner.swift in Sources */,
-				D772B64F2AA5B88A00ADE6C5 /* NSAttributedString+Font.swift in Sources */,
 				D73A67C82A9B8CAF00DA5ADE /* AppDelegate.swift in Sources */,
 				D772B65A2AA9250600ADE6C5 /* Date+Extension.swift in Sources */,
 				D73A68252A9B971300DA5ADE /* FormulaTextAttachment.swift in Sources */,
-				D73A680F2A9B96BD00DA5ADE /* CurrentDocumentRouter.swift in Sources */,
-				D73A680A2A9B96BD00DA5ADE /* CurrentDocumentInteractor.swift in Sources */,
-				D73A68472A9B97AF00DA5ADE /* FormulaPresenter.swift in Sources */,
+				D7BC27E52AD36CFE00E96CF8 /* FormulaOutput.swift in Sources */,
+				D7BC27C02AD2289F00E96CF8 /* DocumentDefaultRouter.swift in Sources */,
+				D7BC27CF2AD32B1500E96CF8 /* FormulaPresenter.swift in Sources */,
 				D73A68322A9B977B00DA5ADE /* BaseExpressionView.swift in Sources */,
-				D73A680E2A9B96BD00DA5ADE /* CurrentDocumentViewController.swift in Sources */,
-				D73A68482A9B97AF00DA5ADE /* FormulaViewController.swift in Sources */,
-				D73A683C2A9B979700DA5ADE /* FormulaView.swift in Sources */,
+				D7BC27BA2AD2287E00E96CF8 /* DocumentDefaultView.swift in Sources */,
+				D73A683C2A9B979700DA5ADE /* MathFormulaView.swift in Sources */,
 				D73A67CA2A9B8CAF00DA5ADE /* SceneDelegate.swift in Sources */,
+				D7BC279B2AD1DC2400E96CF8 /* DocumentsCollectionView.swift in Sources */,
 				D73A681F2A9B96FD00DA5ADE /* TokenType.swift in Sources */,
+				D7BC27812AD1CA1600E96CF8 /* DocumentsInteractor.swift in Sources */,
 				D73A68592A9B9CBC00DA5ADE /* NSAttributedStringTransformer.swift in Sources */,
 				D73A68342A9B977B00DA5ADE /* ExpressionView.swift in Sources */,
-				D73A67FD2A9B966C00DA5ADE /* DocumentsViewController.swift in Sources */,
-				D772B65D2AA92A7300ADE6C5 /* DocumentTableViewCell.swift in Sources */,
 				D73A68292A9B974A00DA5ADE /* FormulaFactory.swift in Sources */,
 				D73A68212A9B970500DA5ADE /* Expression.swift in Sources */,
 				D73A68312A9B977B00DA5ADE /* BinaryExpressionView.swift in Sources */,
