@@ -66,11 +66,8 @@ final class FormulaDefaultView: UIViewController, FormulaView {
     }
     
     func setupAccessibility() {
-        formulaTextView.isAccessibilityElement = true
         formulaTextView.accessibilityLabel = "Текст формулы"
-        formulaTextView.accessibilityTraits = .allowsDirectInteraction
         
-        renderButton.isAccessibilityElement = true
         renderButton.accessibilityLabel = "Вставить формулу"
         renderButton.accessibilityTraits = .button
     }

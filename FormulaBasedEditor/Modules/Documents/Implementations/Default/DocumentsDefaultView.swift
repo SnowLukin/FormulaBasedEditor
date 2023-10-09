@@ -15,7 +15,7 @@ final class DocumentsDefaultView: UIViewController, DocumentsView {
     
     private lazy var searchController: UISearchController = {
         let controller = UISearchController()
-        controller.searchBar.placeholder = " Поиск..."
+        controller.searchBar.placeholder = "Поиск..."
         controller.searchResultsUpdater = self
         navigationItem.searchController = controller
         return controller
@@ -88,17 +88,8 @@ final class DocumentsDefaultView: UIViewController, DocumentsView {
     }
     
     func setupAccessibility() {
-        emptyListLabel.isAccessibilityElement = true
-        emptyListLabel.accessibilityLabel = "Пустой список."
-        emptyListLabel.accessibilityTraits = .staticText
-        
-        addDocumentButton.isAccessibilityElement = true
-        addDocumentButton.accessibilityLabel = "Создать документ."
-        addDocumentButton.accessibilityTraits = .button
-        
-        searchController.isAccessibilityElement = true
-        searchController.accessibilityLabel = "Поиск документов."
-        searchController.accessibilityTraits = .searchField
+        emptyListLabel.accessibilityLabel = "Пустой список"
+        addDocumentButton.accessibilityLabel = "Создать документ"
     }
     
     func updateDocuments(with documents: [Document]) {
