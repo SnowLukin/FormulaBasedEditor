@@ -21,9 +21,11 @@ final class DocumentDefaultView: UIViewController, DocumentView {
         } else {
             view = .init()
         }
+        view.backgroundColor = .white
+        view.textColor = .black
+        view.font = .systemFont(ofSize: 20)
         view.delegate = self
         
-        self.view.addSubview(view)
         return view
     }()
     
@@ -49,10 +51,14 @@ final class DocumentDefaultView: UIViewController, DocumentView {
     
     func configure(with document: Document) {
         self.document = document
+        updateView()
     }
     
     func setupViews() {
-        updateView()
+        self.view.addSubviews(
+            documentTextView
+        )
+        
         documentTextView
             .safeAreaTop()
             .bottom()
@@ -68,7 +74,6 @@ final class DocumentDefaultView: UIViewController, DocumentView {
         title = document?.title
         guard let text = document?.text else { return }
         documentTextView.attributedText = text
-        documentTextView.font = .systemFont(ofSize: 20)
     }
     
     func insertFormula(_ formula: MathFormula, at range: NSRange? = nil) {

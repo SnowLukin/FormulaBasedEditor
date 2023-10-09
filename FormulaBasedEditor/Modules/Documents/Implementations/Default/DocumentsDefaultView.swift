@@ -15,7 +15,7 @@ final class DocumentsDefaultView: UIViewController, DocumentsView {
     
     private lazy var searchController: UISearchController = {
         let controller = UISearchController()
-        controller.searchBar.placeholder = "Поиск..."
+        controller.searchBar.placeholder = "Поиск"
         controller.searchResultsUpdater = self
         navigationItem.searchController = controller
         return controller
@@ -70,7 +70,6 @@ final class DocumentsDefaultView: UIViewController, DocumentsView {
         title = "Документы"
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        
         documentsCollection
             .fitToSuperview()
         emptyListLabel
@@ -90,6 +89,7 @@ final class DocumentsDefaultView: UIViewController, DocumentsView {
     func setupAccessibility() {
         emptyListLabel.accessibilityLabel = "Пустой список"
         addDocumentButton.accessibilityLabel = "Создать документ"
+        searchController.accessibilityLabel = "Поиск"
     }
     
     func updateDocuments(with documents: [Document]) {
@@ -107,6 +107,7 @@ final class DocumentsDefaultView: UIViewController, DocumentsView {
         )
         ac.addTextField()
         
+        let cancelAction = UIAlertAction(title: "Отмена", style: .cancel)
         let submitAction = UIAlertAction(
             title: "Сохранить",
             style: .default
@@ -116,6 +117,7 @@ final class DocumentsDefaultView: UIViewController, DocumentsView {
             self.presenter?.onDocumentFinishEdit(document, newName: name)
         }
         
+        ac.addAction(cancelAction)
         ac.addAction(submitAction)
         
         present(ac, animated: true)
