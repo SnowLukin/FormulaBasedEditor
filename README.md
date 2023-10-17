@@ -8,5 +8,9 @@
 
 AppStore: https://apps.apple.com/ru/app/xeditor/id6464720426?l=en-GB
 
-https://github.com/SnowLukin/FormulaBasedEditor/assets/69481493/bcc51a79-d85d-4fb2-9c08-1ee438c0e412
+
+
+
+
+https://github.com/SnowLukin/FormulaBasedEditor/assets/69481493/520b6330-8939-46ce-b99d-263bd753bdc3
 
